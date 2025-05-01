@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RIPTA Card Swipe Interface Study</title>
   <link rel="stylesheet" href="../project-styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header id="navbar">
@@ -14,6 +14,7 @@
       <div class="nav-links">
         <a href="../../home.html#projects">Projects</a>
         <a href="../../about.html">About</a>
+        <a href="../../fun.html">Fun</a>
         <a href="../../assets/resume.pdf" target="_blank">Resume</a>
       </div>
     </nav>
@@ -26,16 +27,12 @@
 
       <div class="hero-details">
         <div class="detail-block">
-          <div class="detail-label">Role</div>
-          <div class="detail-value">Student</div>
-        </div>
-        <div class="detail-block">
-          <div class="detail-label">Timeline</div>
-          <div class="detail-value">2 weeks, March 2025</div>
-        </div>
-        <div class="detail-block">
           <div class="detail-label">Team</div>
           <div class="detail-value">Solo Project – CSCI1300</div>
+        </div>
+        <div class="detail-block">
+          <p class="detail-label">Timeline</p>
+          <p class="detail-value">2 weeks, March 2025</p>
         </div>
         <div class="detail-block">
           <div class="detail-label">Skills</div>
@@ -60,118 +57,106 @@
             <li><a href="#reflection">Reflection</a></li>        </ul>
     </aside>
     <div class="container">
-        <h2 id="intro">Introduction</h2>
-        <p>The RIPTA (Rhode Island Public Transit Authority) is a public transportation accessible to all Brown University students with their student ID. This study explores the usability of this system, focusing on how users (Brown University Students) interact with the swipe mechanism, common difficulties encountered, and potential improvements to enhance accessibility and efficiency.</p>
-
-        <h2 id="preparation">Part 1: Preparation</h2>
-        <img class="full-image" src="./assets/ripta_sketch.jpg" alt="Sketch of the RIPTA card swipe interface" />
-        <p>The study is conducted through direct observation and user interviews to analyze the efficiency of the swipe interface. The key focus is to understand usability barriers and how users respond to system feedback.</p>
-
-        <h3>Interface Selection</h3>
-        <p>The RIPTA card swipe interface allows passengers to pay their fare using a swipe-based card system. The primary components include:</p>
-        <ul>
-        <li>A card slot for swiping student IDs.</li>
-        <li>An audio beep for successful swipes.</li>
-        <li>A green screen that shows success text when transaction is made.</li>
-        <li>A "Card Not Valid" error sound, but no other error messages.</li>
-        </ul>
-        <p>The system eliminates the need for cash but presents usability challenges such as unclear swipe direction, lack of error-specific feedback, and inconsistent card detection.</p>
-
-        <h3>Interview Questions</h3>
-        <ol>
-        <li>Can you describe your experience using the RIPTA card swipe interface?</li>
-        <li>What do you find most intuitive about the interface?</li>
-        <li>Have you ever encountered difficulties while using the interface?</li>
-        <li>How does this interface compare to other public transit payment systems?</li>
-        <li>What improvements would you suggest to make the interface more user-friendly?</li>
-        <li>Have you observed other passengers struggling with the interface?</li>
-        <li>How do you feel about the feedback provided by the interface?</li>
-        </ol>
-
-        <h2 id="observations">Part 2: Recording Observations</h2>
-
-        <h3>Key Observations</h3>
-        <ul>
-        <li>Users often swiped cards multiple times before successful recognition.</li>
-        <li>Swipe direction was unclear, leading to hesitation and errors.</li>
-        <li>Error messages lacked specificity, creating uncertainty.</li>
-        <li>Passengers with bags struggled to swipe due to height/angle placement.</li>
-        </ul>
-
-        <h3>User Interview Notes</h3>
-        <table>
+      <h2 id="intro">Introduction</h2>
+      <p>Sometimes, it’s the smallest interactions that reveal the biggest gaps in usability. The RIPTA card swipe system is one of those everyday interfaces—simple on the surface, but layered with friction. In this project, I observed how Brown University students interact with the RIPTA bus card swipe reader, uncovering subtle but meaningful pain points around feedback, accessibility, and trust. My goal was to understand not just what didn’t work, but how it made people feel.</p>
+      
+      <h2 id="preparation">Part 1: Preparation</h2>
+      <img class="full-image" src="./assets/ripta_sketch.jpg" alt="Sketch of the RIPTA card swipe interface" />
+      <p>This was a field research project—I went straight to the source: the bus stop. I conducted live observations and short interviews with fellow Brown students during active transit hours. The goal was to trace how people moved through the interface and where friction occurred, both physically and mentally.</p>
+      
+      <h3>Interface Selection</h3>
+      <p>The RIPTA swipe system allows students to board using their Brown ID cards. While functional, its interface is outdated and inconsistent. Here’s how it works:</p>
+      <ul>
+        <li>A physical slot where the card is swiped.</li>
+        <li>A success beep with a green “approved” screen.</li>
+        <li>A vague “Card Not Valid” error sound with no on-screen clarification.</li>
+      </ul>
+      <p>At first glance, it works. But after observing real users—some in a rush, some unfamiliar with the system—it became clear that what’s *missing* (like directionality cues or error specificity) is just as impactful as what’s there.</p>
+      
+      <h3>Interview Questions</h3>
+      <p>I crafted my interviews to center around experience—not just function. I asked:</p>
+      <ol>
+        <li>What’s your experience using this system?</li>
+        <li>What parts feel intuitive or confusing?</li>
+        <li>Have you ever felt uncertain or frustrated during use?</li>
+        <li>How does this compare to other transit systems you’ve used?</li>
+        <li>What would make this experience smoother?</li>
+      </ol>
+      
+      <h2 id="observations">Part 2: Recording Observations</h2>
+      
+      <h3>Key Observations</h3>
+      <ul>
+        <li>Most users had to swipe multiple times before a successful read.</li>
+        <li>Swipe direction was unclear—many tried both orientations.</li>
+        <li>Error messages gave no clues—just a beep and a guess.</li>
+        <li>Users carrying bags had difficulty due to the reader’s height and awkward placement.</li>
+      </ul>
+      
+      <h3>User Interview Notes</h3>
+      <table>
         <thead>
-            <tr><th>User</th><th>Interview Responses</th></tr>
+          <tr><th>User</th><th>Interview Responses</th></tr>
         </thead>
         <tbody>
-            <tr>
+          <tr>
             <td><b>Julia</b></td>
-            <td>
-                <blockquote>
-                <p>"It’s frustrating when the card doesn’t swipe right the first time. I’d prefer a tap system like in stores."</p>
-                </blockquote>
-            </td>
-            </tr>
-            <tr>
+            <td><blockquote>"It’s frustrating when the card doesn’t swipe right the first time. I’d prefer a tap system like in stores."</blockquote></td>
+          </tr>
+          <tr>
             <td><b>Avery</b></td>
-            <td>
-                <blockquote>
-                <p>"I’ve swiped and heard an error sound with no explanation. I never know if it's the card or the machine."</p>
-                </blockquote>
-            </td>
-            </tr>
-            <tr>
+            <td><blockquote>"I’ve swiped and heard an error sound with no explanation. I never know if it's the card or the machine."</blockquote></td>
+          </tr>
+          <tr>
             <td><b>Jake</b></td>
-            <td>
-                <blockquote>
-                <p>"The swipe direction graphic is worn out. I often rely on the driver or screen to confirm it worked."</p>
-                </blockquote>
-            </td>
-            </tr>
+            <td><blockquote>"The swipe direction graphic is worn out. I often rely on the driver or screen to confirm it worked."</blockquote></td>
+          </tr>
         </tbody>
-        </table>
-
-        <h3>Key Findings from User Interviews</h3>
-        <ul>
-        <li><b>Directionality Issues:</b> Unclear or faded instructions create multiple failed attempts.</li>
-        <li><b>Reliability Concerns:</b> Cards often fail to register; feedback is insufficient.</li>
-        <li><b>Feedback Limitations:</b> Screen/audio prompts are minimal and easy to miss.</li>
-        <li><b>Improvement Suggestions:</b> Contactless payment, clearer visual/audio feedback, repositioned card reader.</li>
-        </ul>
-
-        <h2 id="personas">Part 3: Personas</h2>
-        <div class="two-column">
-            <div class="section">
-                <h3>Person A: Frustrated Commuter</h3>
-                <p>Relies on RIPTA weekly but finds the swipe system unreliable and confusing.</p>
-                <img class="full-image" src="./assets/person_A.png" alt="Persona A" />
-                <ul>
-                <li>Swipe errors common, no clarity on cause.</li>
-                <li>Wants quicker, more reliable access.</li>
-                </ul>
-            </div>
-            <div class="section">
-                <h3>Person B: New User</h3>
-                <p>New to the system, experiences anxiety and confusion using the interface.</p>
-                <img class="full-image" src="./assets/person_B.png" alt="Persona B" />
-                <ul>
-                <li>Unclear signage increases first-time errors.</li>
-                <li>Feedback is vague, causing uncertainty.</li>
-                </ul>
-            </div>
+      </table>
+      
+      <h3>Key Findings</h3>
+      <ul>
+        <li><b>Directionality:</b> Users lacked clear cues on how to swipe, leading to trial and error.</li>
+        <li><b>Unclear Feedback:</b> Generic error sounds made it impossible to know what went wrong.</li>
+        <li><b>Accessibility Flaws:</b> Placement of the card reader created friction for anyone carrying bags or with limited mobility.</li>
+        <li><b>User Suggestions:</b> Contactless systems, brighter feedback, repositioned hardware for better reachability.</li>
+      </ul>
+      
+      <h2 id="personas">Part 3: Personas</h2>
+      <p>I built two personas to capture the range of experiences I observed—both the frustrated regular and the overwhelmed newcomer.</p>
+      <div class="two-column">
+        <div class="section">
+          <h3>Person A: The Frustrated Commuter</h3>
+          <p>Rides RIPTA weekly but dreads the card reader. It’s unreliable and slows her down.</p>
+          <img class="full-image" src="./assets/person_A.png" alt="Persona A" />
+          <ul>
+            <li>Encounters swipe errors often.</li>
+            <li>Wants a faster, more predictable system.</li>
+          </ul>
         </div>
-
-        <h2 id="storyboarding">Part 4: Storyboarding</h2>
-        <p>This storyboard illustrates the first-time user experience and common pain points.</p>
-        <img class="full-image" src="./assets/storyboard.png" alt="Storyboard" />
-        <ul>
-        <li>Confusion around swipe direction and feedback clarity.</li>
-        <li>Anxiety from delays and lack of confirmation.</li>
-        </ul>
-        <h2 id="reflection">Reflection</h2>
-        <p>This project deepened my understanding of how even the simplest public interfaces—like a card swipe reader—can have profound impacts on user experience, particularly for first-time or frequent users. While the system technically fulfills its purpose, the lack of clear feedback and intuitive guidance creates unnecessary barriers and frustration. Conducting interviews and observations highlighted the gap between system design and user expectations, reinforcing the importance of accessibility, feedback clarity, and affordances in interface design.</p>
-
-        <p>Moreover, creating personas and storyboards allowed me to empathize more deeply with different user types. I learned that good design not only solves functional problems but also reduces anxiety, increases confidence, and fosters inclusivity. This study reminded me that every interface, no matter how minor, should be designed with the user’s emotional and physical context in mind.</p>
+        <div class="section">
+          <h3>Person B: The First-Timer</h3>
+          <p>New to RIPTA, this student feels anxious and uncertain using the system for the first time.</p>
+          <img class="full-image" src="./assets/person_B.png" alt="Persona B" />
+          <ul>
+            <li>Struggles with unclear instructions.</li>
+            <li>Feels unsure when the system gives no feedback.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h2 id="storyboarding">Part 4: Storyboarding</h2>
+      <p>I translated these findings into a visual storyboard, mapping the typical pain points of a first-time user—especially the moment of confusion when feedback is absent or ambiguous.</p>
+      <img class="full-image" src="./assets/storyboard.png" alt="Storyboard" />
+      <ul>
+        <li>User hesitates at the card reader, unsure of which way to swipe.</li>
+        <li>They swipe once—no sound. Twice—error beep. Still no confirmation.</li>
+        <li>The driver steps in to help. The experience feels disempowering.</li>
+      </ul>
+      
+      <h2 id="reflection">Reflection</h2>
+      <p>This project reminded me that no interface is “too small” to matter. A simple card swipe is a *moment of trust*—a point where a user expects clarity, confidence, and ease. And when that moment fails, it has ripple effects: anxiety, delay, even embarrassment.</p>
+      <p>Through this study, I learned to see public interfaces not just as technical systems, but as social spaces. By listening to real voices and watching real behaviors, I uncovered gaps that data alone wouldn’t show. Personas and storyboarding helped me stay grounded in empathy—and reminded me that good design serves *everyone*, not just the average user.</p>      
     </div>
     </div>  
 
@@ -202,5 +187,32 @@
       });
     });
   </script>    
+
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Enlarged">
+    </div>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    document.querySelectorAll("img").forEach(img => {
+      if (img.id !== "lightbox-img") {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.style.display = "flex";
+        });
+      }
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (!e.target.closest('.lightbox-content')) {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+  </script>
 </body>
 </html>

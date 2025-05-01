@@ -14,6 +14,7 @@
       <div class="nav-links">
         <a href="../../home.html#projects">Projects</a>
         <a href="../../about.html">About</a>
+        <a href="../../fun.html">Fun</a>
         <a href="../../assets/resume.pdf" target="_blank">Resume</a>
       </div>
     </nav>
@@ -26,16 +27,12 @@
 
       <div class="hero-details">
         <div class="detail-block">
-          <p class="detail-label">Role</p>
-          <p class="detail-value">Student</p>
+          <p class="detail-label">Team</p>
+          <p class="detail-value">Solo Project – CSCI1300</p>
         </div>
         <div class="detail-block">
           <p class="detail-label">Timeline</p>
           <p class="detail-value">2 weeks, February 2025</p>
-        </div>
-        <div class="detail-block">
-          <p class="detail-label">Class</p>
-          <p class="detail-value">CSCI1300</p>
         </div>
         <div class="detail-block">
           <p class="detail-label">Skills</p>
@@ -62,172 +59,124 @@
     </aside>
 
     <div class="container">
-        <h2 id="introduction">Introduction</h2>
-        <p>Dropdown menus are an essential part of user interfaces, yet their accessibility is often overlooked. This case study explores how dropdown menus in various applications incorporate accessibility features and how they can be improved. The goal is to analyze existing designs, identify areas for enhancement, and propose a redesigned dropdown menu that improves usability, efficiency, and accessibility.</p>
-      
-        <h2 id="input">Part 1: Input</h2>
-        <p>First, we examine how dropdown menus function across different platforms, including Google Docs, Finder (Mac), and Google Bookmarks. These comparisons help us understand how different services approach dropdown interactions.</p>
-      
-        <section class="three-column">
-          <div class="section">
-            <p><b>Google Docs</b></p>
-            <img class="part1docs" src="./photos/pt1googledocexpanded.png" alt="Google Doc Dropdown Menu Expanded">    
-          </div>
-          <div class="section">
-            <p><b>Finder</b></p>
-            <img class="part1finder" src="./photos/pt1finderexpanded.png" alt="Finder Dropdown Menu Expanded">    
-          </div>
-          <div class="section">
-            <p><b>Google Bookmarks</b></p>
-            <img class="part1finder" src="./photos/pt1bookmarkexpanded.png" alt="Google Bookmarks Dropdown Menu Expanded">    
-          </div>
-        </section>
-      
-        <p>The following table analyzes how these dropdowns handle different input methods: mouse, keyboard, and touch.</p>
-      
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Google Docs</th>
-              <th>Finder</th>
-              <th>Google Bookmarks</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Mouse/Touchpad</th>
-              <td>
-                <ul>
-                  <li>Click to open; items appear in a list</li>
-                  <li>Hovering highlights options</li>
-                  <li>Sub-items appear on hover</li>
-                  <li>Blocked options are greyed out</li>
-                  <li>Left/right click to select</li>
-                  <li>Click outside to close</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Click to open</li>
-                  <li>Mouse highlights menu items</li>
-                  <li>Left/right click to select</li>
-                  <li>Click outside to close</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Click to open</li>
-                  <li>Mouse highlights menu items</li>
-                  <li>Left click to select, right click for options</li>
-                  <li>Click outside to close</li>
-                  <li>Drag to navigate items</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>Keyboard</th>
-              <td>
-                <ul>
-                  <li>Open with shortcut (e.g., Ctrl+Option+F)</li>
-                  <li>Navigate with arrow keys</li>
-                  <li>Enter to select, Esc to close</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Difficult to open with keyboard</li>
-                  <li>Arrow key navigation, Enter to select, Esc to close</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Same as Finder</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>Touch</th>
-              <td>
-                <ul>
-                  <li>Tap to open and select</li>
-                  <li>Scroll through long menus</li>
-                </ul>
-              </td>
-              <td colspan="2">N/A</td>
-            </tr>
-          </tbody>
-        </table>
-      
-        <p>The mouse and touchpad are the most intuitive input methods due to visual interaction. Keyboard navigation is less discoverable, often relying on multiple keystrokes.</p>
-      
-        <h2 id="output">Part 2: Output</h2>
-        <p>When interacting with dropdown menus, inputs trigger state changes and outputs provide feedback. These can be visual, textual, or screen-reader specific.</p>
-      
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Google Docs</th>
-              <th>Finder</th>
-              <th>Google Bookmarks</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Visual Feedback</th>
-              <td>Hover/selection highlight; darker background on click</td>
-              <td>Color change on hover; click indicators</td>
-              <td>Hover/selection highlight; drag indicators</td>
-            </tr>
-            <tr>
-              <th>Text Feedback</th>
-              <td colspan="3">None (entirely visual)</td>
-            </tr>
-            <tr>
-              <th>Focus Order</th>
-              <td>Tab exits menu</td>
-              <td>Tab switches menus</td>
-              <td>Tab has no effect</td>
-            </tr>
-            <tr>
-              <th>State Indications</th>
-              <td>Grey for active/disabled; triangle expands items</td>
-              <td>Blue for active; dim for disabled</td>
-              <td>Faint highlight for selection</td>
-            </tr>
-            <tr>
-              <th>VoiceOver</th>
-              <td>Reads names, skips disabled, announces structure</td>
-              <td>Reads all, including command keys</td>
-              <td>Reads names only, uses arrow key navigation</td>
-            </tr>
-            <tr>
-              <th>Overall Accessibility</th>
-              <td>Strong but verbose VoiceOver output</td>
-              <td>Good balance of feedback</td>
-              <td>Simple and effective, may vary by folder</td>
-            </tr>
-          </tbody>
-        </table>
-      
-        <h2 id="redesign">Part 3: Redesign</h2>
-        <p>State models were developed to visualize user interaction paths for both mouse and keyboard users.</p>
-        <img class="part3" src="./photos/pt3default.png" alt="Default state model">
-      
-        <p>I also explored a tradeoff scenario by removing hover/focus states to simplify screen reader interpretation. This helped highlight the tension between clarity and simplicity for different users.</p>
-        <img class="part3" src="./photos/pt3tradeoff.png" alt="Tradeoff state model">
-      
-        <p>Finally, I designed an improved dropdown integrating stronger visual feedback and keyboard affordances for broader accessibility.</p>
-        <img class="part3" src="./photos/pt3redesign.png" alt="Redesigned dropdown menu">
-      
-        <h2 id="reflection">Part 4: Reflection</h2>
-        <p>The dropdown menus in existing applications generally support basic usability but often lack strong accessibility considerations. While they offer fundamental focus states, they often fail to provide sufficient clarity for users with disabilities.</p>
-        <p>My redesign strengthens accessibility with bold highlights, larger spacing, and clear focus indicators. These adjustments make the component more navigable for users with vision or motor impairments.</p>
-        <p>Kat Holmes’ idea of solving mismatches shaped my approach. Interfaces that don't consider varied user needs inherently exclude many. Spacing, affordances, and input compatibility are essential to address those mismatches.</p>
-        <p>One positive impact is intuitive keyboard control—using arrow keys and Enter to select—helping those who rely solely on keyboards. A potential drawback, however, is that removing hover states (in the tradeoff design) could confuse users who depend on visual cues for selection.</p>
-        <p>Most dropdowns are optimized for mouse use, making them less inclusive. My redesign prioritizes equal usability across input types to create a balanced experience.</p>
-      </div>      
+      <h2 id="introduction">Introduction</h2>
+<p>Dropdown menus seem simple—until they aren’t. While they’re a core part of nearly every interface, their accessibility is often treated as an afterthought. This project was my chance to rethink that. I examined dropdown behavior across multiple platforms and redesigned the component to prioritize users who navigate the web differently—whether due to vision, mobility, or interaction preferences. My goal wasn’t just to refine UI mechanics, but to ensure that no user feels like an afterthought.</p>
+
+<h2 id="input">Part 1: Input</h2>
+<p>I started by analyzing dropdown menus in Google Docs, Finder, and Google Bookmarks. Each platform handled interaction differently—especially when it came to input methods like keyboard or touch. These comparisons helped me understand the subtle design choices that make—or break—accessibility.</p>
+
+<section class="three-column">
+  <div class="section">
+    <p><b>Google Docs</b></p>
+    <img class="part1docs" src="./photos/pt1googledocexpanded.png" alt="Google Doc Dropdown Menu Expanded">    
+  </div>
+  <div class="section">
+    <p><b>Finder</b></p>
+    <img class="part1finder" src="./photos/pt1finderexpanded.png" alt="Finder Dropdown Menu Expanded">    
+  </div>
+  <div class="section">
+    <p><b>Google Bookmarks</b></p>
+    <img class="part1finder" src="./photos/pt1bookmarkexpanded.png" alt="Google Bookmarks Dropdown Menu Expanded">    
+  </div>
+</section>
+
+<p>Here’s how each handled input across devices:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Google Docs</th>
+      <th>Finder</th>
+      <th>Google Bookmarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Mouse</th>
+      <td>Robust, responsive hover states and clear item hierarchy.</td>
+      <td>Minimal feedback—functional, but barebones.</td>
+      <td>Good drag support, but lacks precision for longer menus.</td>
+    </tr>
+    <tr>
+      <th>Keyboard</th>
+      <td>Supports shortcuts and navigation, but requires multiple key combos.</td>
+      <td>Technically usable, but hard to access menus initially.</td>
+      <td>Follows Finder's lead—functional but discoverability is low.</td>
+    </tr>
+    <tr>
+      <th>Touch</th>
+      <td>Tap-to-open works well; scrollable menus are fluid.</td>
+      <td colspan="2">Not optimized for touch interfaces.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Mouse and touch were clearly prioritized in all three examples. Keyboard input, while supported, often felt like a patch—rather than a core part of the experience.</p>
+
+<h2 id="output">Part 2: Output</h2>
+<p>I next explored how feedback was communicated. What happens when a user interacts with a dropdown? Can they tell what’s happening? Can a screen reader follow?</p>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Google Docs</th>
+      <th>Finder</th>
+      <th>Google Bookmarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Visual</th>
+      <td>Hover colors, dropdown arrows, and bold text indicate states well.</td>
+      <td>Consistent selection cues but less visually descriptive.</td>
+      <td>Lightweight design works, but hover states can feel subtle.</td>
+    </tr>
+    <tr>
+      <th>Screen Reader</th>
+      <td>Thorough but verbose—announces all items and states.</td>
+      <td>Reads command keys and labels clearly.</td>
+      <td>Simplified output—useful but lacks context cues.</td>
+    </tr>
+    <tr>
+      <th>Focus Order</th>
+      <td>Logical, but easy to exit unintentionally with Tab.</td>
+      <td>Cycle-friendly, though not always obvious.</td>
+      <td>Focus retention was inconsistent.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Even with visual cues in place, screen reader and keyboard users had a harder time receiving feedback. Text alternatives were minimal, and affordances weren’t always coded clearly.</p>
+
+<h2 id="redesign">Part 3: Redesign</h2>
+<p>Armed with insights, I created a state model to map user paths across inputs. This helped me identify moments of friction—especially around keyboard navigation and voiceover consistency.</p>
+
+<img class="part3" src="./photos/pt3default.png" alt="Default state model">
+
+<p>I also tested a tradeoff design—removing hover states to simplify screen reader interpretation. While it clarified screen reader output, it sacrificed a key visual cue. The result? A deeper appreciation for the balance designers must strike between clarity and context.</p>
+
+<img class="part3" src="./photos/pt3tradeoff.png" alt="Tradeoff state model">
+
+<p>The final design integrated:</p>
+<ul>
+  <li><b>Bold visual states</b> that adapt to keyboard focus</li>
+  <li><b>Larger hit areas</b> for motor accessibility</li>
+  <li><b>Screen-reader labels</b> for each item and state</li>
+  <li><b>Simplified tab ordering</b> to reduce user confusion</li>
+</ul>
+
+<img class="part3" src="./photos/pt3redesign.png" alt="Redesigned dropdown menu">
+
+<h2 id="reflection">Part 4: Reflection</h2>
+<p>This project shifted how I think about components. A dropdown isn’t just a menu—it’s a decision point, an input field, and a space for inclusion. Kat Holmes’ concept of “solving for mismatch” stayed with me throughout. When we design for edge cases, we often make the experience better for everyone.</p>
+
+<p>I’m proud of how the final component balances discoverability and accessibility. Keyboard-only users can navigate with ease. Screen reader users get clear state updates. And visual users still benefit from intuitive cues and clean design.</p>
+
+<p>Designing for accessibility isn’t about extra features—it’s about being intentional. And that mindset is something I’ll carry forward into every project I touch.</p>
+
+    </div>      
   </div>
 
   <footer>
@@ -257,5 +206,32 @@
       });
     });
   </script> 
+
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="Enlarged">
+  </div>
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  document.querySelectorAll("img").forEach(img => {
+    if (img.id !== "lightbox-img") {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+      });
+    }
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (!e.target.closest('.lightbox-content')) {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    }
+  });
+</script>
 </body>
 </html>

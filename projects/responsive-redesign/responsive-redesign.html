@@ -14,6 +14,7 @@
           <div class="nav-links">
             <a href="../../home.html#projects">Projects</a>
             <a href="../../about.html">About</a>
+            <a href="../../fun.html">Fun</a>
             <a href="../../assets/resume.pdf" target="_blank">Resume</a>
           </div>
         </nav>
@@ -25,16 +26,12 @@
       
           <div class="hero-details">
             <div class="detail-block">
-              <p class="detail-label">Role</p>
-              <p class="detail-value">Student</p>
+              <p class="detail-label">Team</p>
+              <p class="detail-value">Solo Project – CSCI1300</p>
             </div>
             <div class="detail-block">
               <p class="detail-label">Timeline</p>
               <p class="detail-value">2 weeks, March 2025</p>
-            </div>
-            <div class="detail-block">
-              <p class="detail-label">Team</p>
-              <p class="detail-value">Solo Project – CSCI1300</p>
             </div>
             <div class="detail-block">
               <p class="detail-label">Skills</p>
@@ -59,128 +56,124 @@
             </ul>
         </aside>
         <div class="container">
-            <h2 id="overview">Overview</h2>
-            <p>This project presents a full redesign of the <a href="https://apply.mitadmissions.org/portal/apply" target="_blank">MIT Admissions Application Portal</a>, addressing critical usability and accessibility problems identified in the original site. Through a structured design process and responsive HTML/CSS development, the site now adapts seamlessly across screen sizes and user needs.</p>
-
-            <h2 id="usability">Part 1: Identifying Usability Problems</h2>
-
-            <h3>Original Website Screenshot</h3>
-            <img class="full-image" src="./assets/mit_original.png" alt="Screenshot of the original MIT Admissions portal">
-
-            <h4>Mobile View</h4>
-            <div class="mockup-row">
-                <img src="./assets/mobile_og.jpeg" alt="Original MIT site on mobile view - top of page" class="mockup-phone">
-                <img src="./assets/mobile_og2.PNG" alt="Original MIT site on mobile view - bottom of page" class="mockup-phone">
-            </div>
-
-            <h3>Why I Chose This Site</h3>
-            <p>The MIT Admissions portal is a mission-critical interface that influences thousands of applicants annually. However, it lacks design clarity, especially for new users. For example, the "MIT Admissions" text in the footer is also a hyperlink to the main admissions page, which is not intuitive. It’s public, form-intensive, and significantly underperforms in mobile and accessibility contexts, making it a meaningful candidate for improvement.</p>
-
-            <h3>Accessibility & Mobile Responsiveness Audit</h3>
-            <p>Using the <a href="https://wave.webaim.org/" target="_blank">WAVE Evaluation Tool</a> and Chrome DevTools, I identified major accessibility and responsiveness shortcomings:</p>
-            <ul>
-                <li><b>WAVE:</b> 1 error, 4 alerts, 3 ARIA elements, and 0 contrast issues. The report revealed weak semantic structure and missing assistive technology support.</li>
-                <li><b>Mobile View:</b> No adaptive layout or spacing. On small screens, links are difficult to tap, content appears cluttered and not focused.</li>
-            </ul>
-
-            <h3>Usability Issues</h3>
-            <ul>
-                <li><b>Lack of Clear Buttons:</b> Critical actions are styled as links without visual cues.</li>
-                <li><b>Poor Information Hierarchy:</b> Key actions are buried in body text without emphasis.</li>
-                <li><b>Text Readability:</b> Unfriendly font sizes and poor spacing disrupt legibility.</li>
-            </ul>
-
-            <h3 id="analysis">Usability Analysis</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Problem</th>
-                        <th>Impact</th>
-                        <th>Solution</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Efficiency</td>
-                        <td>Primary actions like "Create Account" and "Log In" are not visually prominent and appear as small links.</td>
-                        <td>Slows down user action, particularly under time pressure. Increases cognitive load as users scan text for interaction points.</td>
-                        <td>Introduce prominent call-to-action buttons with clear labels and primary colors to guide user actions.</td>
-                    </tr>
-                    <tr>
-                        <td>Learnability</td>
-                        <td>Links are styled inconsistently, and some are embedded within paragraphs without affordances.</td>
-                        <td>Users unfamiliar with the site may not recognize clickable areas, leading to frustration or misnavigation.</td>
-                        <td>Use consistent styling (e.g., underline and hover effects) for all links and separate important navigation elements from body copy.</td>
-                    </tr>
-                    <tr>
-                        <td>Memorability</td>
-                        <td>Navigation and layout structure changes between pages, and UI patterns are not reused effectively.</td>
-                        <td>Returning users must relearn interface patterns each time, increasing friction and likelihood of abandonment.</td>
-                        <td>Design a consistent layout and reusable components that appear across all pages for familiarity and predictability.</td>
-                    </tr>
-                    <tr>
-                        <td>Responsiveness</td>
-                        <td>Page content does not scale properly on smaller devices; horizontal scroll and visual clutter on mobile.</td>
-                        <td>Frustrates users accessing the portal from phones or tablets. This interrupts tasks like submitting forms or reading instructions.</td>
-                        <td>Use a responsive grid system and apply flexible images, containers, and media queries to adapt to all screen sizes.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2 id="visual">Part 2: Visual Redesign</h2>
-
-            <h3>Style Guide</h3>
-            <p>This standalone visual guide specifies typography, spacing, color palettes, and reusable components. All mocks use this guide to ensure cohesion across screen sizes without additional annotation.</p>
-            <img class="full-image" src="./assets/style_guide.png" alt="Visual Style Guide">
-
-            <h3>Mockups</h3>
-            <div class="two-column">
-                <div class="section">
-                    <h4>Desktop (MacBook)</h4>
-                    <img class="full-image" src="./assets/mockup_mac.png" alt="MacBook mockup">
-                </div>
-                <div class="section">
-                    <h4>Tablet & Mobile</h4>
-                    <img class="full-image" src="./assets/mockup_tabletmobile.png" alt="Tablet and Phone mockup">
-                </div>
-            </div>
-
-            <h3>Key Layout Adjustments</h3>
-            <ul>
-                <li>Used flexbox and CSS grid for scalable, reusable layout components.</li>
-                <li>Defined spacing and visual rhythm through consistent padding and alignment.</li>
-                <li>Created a shared button and card system for clarity and intuitive transitions across viewports.</li>
-            </ul>
-
-            <h2 id="responsive">Part 3: Responsive Redesign</h2>
-
-            <p>The final site was built in HTML/CSS and deployed to GitHub Pages. It fully implements the mockups and passes the WebAIM WAVE accessibility evaluation with no errors, while adhering to modern responsive design principles. All text, components, and images adapt fluidly from 375px to 1200px+ viewports and respond to font size changes.</p>
-
-            <p>
-                <a href="https://jiwonvyoo.github.io/responsive-redesign-page/" target="_blank" class="highlight-button">View Live Redesigned Page!</a>
-            </p>
-
-            <p>Screenshots of the final design on different devices:</p>
-            <p><b>Laptop</b></p>
-            <img class="full-image" src="./assets/actual-laptop.png" alt="Redesigned site on laptop">
-            <p><b>Tablet & Phone</b></p>
-            <div class="mockup-row">
-                <img src="./assets/actual-tablet.jpeg" alt="Redesigned site on iPad" class="mockup-tablet">
-                <img src="./assets/actual-phone.jpeg" alt="Redesigned site on iPhone" class="mockup-phone">
-            </div>
-
-            <h3>Responsiveness Highlights</h3>
-            <ul>
-                <li>Fully functional and visually consistent on mobile, tablet, and desktop.</li>
-                <li>Responsive to text zoom and long-form content in various languages.</li>
-                <li>Redesign resolves original issues with layout clarity and button visibility.</li>
-                <li>Improved accessibility via color contrast, readable alt text, and semantic tags.</li>
-                <li>Final implementation closely follows mocks and is production-ready.</li>
-            </ul>
-
-            <h2 id="reflection">Reflection</h2>
-            <p>This project taught me to treat accessibility and responsiveness as foundational design principles, not post-hoc additions. The redesign improves usability for all users while reinforcing my skills in layout systems, responsive workflows, and interface clarity. It also gave me practice translating design artifacts into clean, reusable code.</p>
+          <h2 id="overview">Overview</h2>
+          <p>The MIT Admissions Portal is one of the most important tools for prospective students—but its original design lacked the clarity and responsiveness today’s users expect. For this solo project, I reimagined the experience from the ground up, guided by accessibility, simplicity, and trust. My goal was to create a smoother, more intuitive journey for applicants—especially first-timers navigating an already stressful process.</p>
+          
+          <h2 id="usability">Part 1: Identifying Usability Problems</h2>
+          
+          <h3>Original Website Screenshot</h3>
+          <img class="full-image" src="./assets/mit_original.png" alt="Screenshot of the original MIT Admissions portal">
+          
+          <h4>Mobile View</h4>
+          <div class="equal-height-row">
+              <img src="./assets/mobile_og.jpeg" alt="Original MIT site on mobile view - top of page" class="mockup-phone">
+              <img src="./assets/mobile_og2.PNG" alt="Original MIT site on mobile view - bottom of page" class="mockup-phone">
+          </div>
+          
+          <h3>Why I Chose This Site</h3>
+          <p>The MIT Admissions portal plays a major role in shaping students' first impressions—but its interface felt disjointed and unintuitive. For instance, the main "Admissions" link is hidden in the footer with no visual hierarchy. That friction adds up. I chose this project because I wanted to design an interface that meets users where they are, especially on mobile, where most high school students are accessing the site.</p>
+          
+          <h3>Accessibility & Mobile Responsiveness Audit</h3>
+          <p>I ran a full diagnostic using <a href="https://wave.webaim.org/" target="_blank">WAVE</a> and Chrome DevTools. The results were telling:</p>
+          <ul>
+              <li><b>WAVE:</b> Several alerts and structural issues, including underutilized ARIA tags and poor semantic clarity.</li>
+              <li><b>Mobile View:</b> No adaptive layout—elements were cramped, touch targets were small, and the hierarchy disappeared entirely.</li>
+          </ul>
+          
+          <h3>Usability Issues</h3>
+          <ul>
+              <li><b>Buried Actions:</b> Core actions like “Log In” felt like footnotes instead of focal points.</li>
+              <li><b>Inconsistent Styling:</b> Clickable links blended into body text, missing critical affordances.</li>
+              <li><b>Weak Visual Hierarchy:</b> Typography and spacing didn’t guide the eye—important info got lost in the noise.</li>
+          </ul>
+          
+          <h3 id="analysis">Usability Analysis</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Category</th>
+                      <th>Problem</th>
+                      <th>Impact</th>
+                      <th>Solution</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Efficiency</td>
+                      <td>Key actions look like passive links instead of calls to action.</td>
+                      <td>Users waste time searching for where to begin—especially stressful in application workflows.</td>
+                      <td>Introduce bold, purposefully placed buttons with clear, scannable labels.</td>
+                  </tr>
+                  <tr>
+                      <td>Learnability</td>
+                      <td>Mixed link styles create guesswork.</td>
+                      <td>First-time users miss important options or click incorrect areas.</td>
+                      <td>Unify visual language for links and surface navigation clearly.</td>
+                  </tr>
+                  <tr>
+                      <td>Memorability</td>
+                      <td>Layout shifts dramatically between pages.</td>
+                      <td>Return visits feel unfamiliar—users have to re-learn patterns each time.</td>
+                      <td>Establish reusable UI components and consistent layout scaffolding.</td>
+                  </tr>
+                  <tr>
+                      <td>Responsiveness</td>
+                      <td>Site breaks on smaller viewports.</td>
+                      <td>Crucial info gets buried or cut off, especially on phones.</td>
+                      <td>Use a mobile-first grid system, responsive images, and scalable text styles.</td>
+                  </tr>
+              </tbody>
+          </table>
+          
+          <h2 id="visual">Part 2: Visual Redesign</h2>
+          
+          <h3>Style Guide</h3>
+          <p>I developed a custom style guide to bring structure, clarity, and calm to the experience—especially for anxious applicants. Typography, spacing, color, and components were standardized to support visual consistency across screen sizes.</p>
+          <img class="full-image" src="./assets/style_guide.png" alt="Visual Style Guide">
+          
+          <h3>Mockups</h3>
+          <h4>Desktop (MacBook)</h4>
+          <img class="full-image" src="./assets/mockup_mac.png" alt="MacBook mockup">
+          <h4>Tablet & Mobile</h4>
+          <img class="full-image" src="./assets/mockup_tabletmobile.png" alt="Tablet and Phone mockup">
+          
+          <h3>Key Layout Adjustments</h3>
+          <ul>
+              <li>Created modular layout using flexbox and grid to allow scalability.</li>
+              <li>Refined spacing and alignment to improve clarity and rhythm.</li>
+              <li>Introduced clear buttons, cards, and CTAs to anchor the experience.</li>
+          </ul>
+          
+          <h2 id="responsive">Part 3: Responsive Redesign</h2>
+          
+          <p>The final build, deployed on GitHub Pages, is fully responsive and WAVE-compliant. From phones to desktops, the design flexes beautifully while maintaining integrity. Even with dynamic content and varying screen widths, the layout holds strong and legibility never falters.</p>
+          
+          <p>
+              <a href="https://jiwonvyoo.github.io/responsive-redesign-page/" target="_blank" class="highlight-button">View Live Redesigned Page!</a>
+          </p>
+          
+          <p><b>Screenshots from the final build:</b></p>
+          <p><b>Laptop</b></p>
+          <img class="full-image" src="./assets/actual-laptop.png" alt="Redesigned site on laptop">
+          <p><b>Tablet & Phone</b></p>
+          <div class="equal-height-row">
+              <img src="./assets/actual-tablet.jpeg" alt="Redesigned site on iPad" class="mockup-tablet">
+              <img src="./assets/actual-phone.jpeg" alt="Redesigned site on iPhone" class="mockup-phone">
+          </div>
+          
+          <h3>Responsiveness Highlights</h3>
+          <ul>
+              <li>Clean transitions between breakpoints, from 375px up to large monitors.</li>
+              <li>All text and UI elements respond well to zoom and accessibility settings.</li>
+              <li>Design preserves clarity even with high cognitive load (e.g., form filling).</li>
+              <li>Alt text, ARIA support, and color contrast were all carefully considered.</li>
+              <li>The final design honors the original structure while offering a smoother path forward.</li>
+          </ul>
+          
+          <h2 id="reflection">Reflection</h2>
+          <p>This project reminded me that good design is invisible until it fails. The MIT portal isn’t broken—but it wasn’t working for its most important audience. Through this process, I learned how even small adjustments—clear buttons, clean hierarchy, mobile support—can radically shift how someone feels about a task.</p>
+          <p>By building everything from scratch, I also deepened my fluency in CSS systems and responsive logic. More than anything, this project helped me understand that accessibility isn’t a feature—it’s a mindset.</p>
+          
         </div>
     </div>
     
@@ -209,6 +202,33 @@
             });
           });
         });
-      </script>      
+      </script>  
+      
+      <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="Enlarged">
+        </div>
+      </div>
+    
+      <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+    
+        document.querySelectorAll("img").forEach(img => {
+          if (img.id !== "lightbox-img") {
+            img.addEventListener("click", () => {
+              lightboxImg.src = img.src;
+              lightbox.style.display = "flex";
+            });
+          }
+        });
+    
+        lightbox.addEventListener("click", (e) => {
+          if (!e.target.closest('.lightbox-content')) {
+            lightbox.style.display = "none";
+            lightboxImg.src = "";
+          }
+        });
+      </script>
 </body>
 </html>
