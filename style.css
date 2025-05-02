@@ -85,7 +85,7 @@ a:hover {
 .intro {
   text-align: center;
   padding-top: 12rem;
-  padding-bottom: 10rem;
+  padding-bottom: 8rem;
   position: relative;
   min-height: 450px;
   overflow: visible;
@@ -184,7 +184,7 @@ h1 {
 }
 
 .project-card {
-  background: #ffffff;
+  background: #dce8ff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 1rem;
@@ -196,15 +196,6 @@ h1 {
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.project-header {
-  font-weight: bold;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 0.3rem 0.6rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
 }
 
 .project-card img {
