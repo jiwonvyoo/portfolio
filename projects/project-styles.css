@@ -593,3 +593,23 @@ body {
 h2, h3, h4 {
   color: #1d3557;
 }
+
+@media (max-width: 1024px) {
+  .top-nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
