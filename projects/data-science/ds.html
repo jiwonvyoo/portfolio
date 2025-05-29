@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Waves – Surfing the Market</title>
+    <link rel="stylesheet" href="../project-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="top-nav">
+        <a href="../../index.html" class="logo">Jiwon Yoo</a>
+        <div class="nav-links">
+          <a href="../../index.html#projects">Projects</a>
+          <a href="../../about.html">About</a>
+          <a href="../../fun.html">Fun</a>
+          <a href="../../assets/resume.pdf" target="_blank">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="project-hero">
+      <div class="hero-content">
+        <h1 class="project-title">Job Waves – Surfing the Market</h1>
+        <p class="project-subtitle">Data-driven insights into pandemic-era employment volatility through sentiment analysis and predictive modeling.</p>
+        <div class="hero-details">
+          <div class="detail-block">
+            <p class="detail-label">Team</p>
+            <p class="detail-value">Jiwon Yoo, Christopher Chen, Eric Kim, Felix Lee</p>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">Timeline</p>
+            <p class="detail-value">Spring 2025 – Brown University</p>
+            <p class="detail-value">CSCI 1951A: Data Science</p>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">Skills</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">NLP</span>
+              <span class="tag">BERT</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Sentiment Analysis</span>
+              <span class="tag">Statistical Testing</span>
+              <span class="tag">Data Visualization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-wrapper">
+      <aside class="toc-nav">
+        <p class="toc-title">On this page</p>
+        <ul>
+          <li><a href="#context">Context</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#hypotheses">Hypotheses & Data</a></li>
+          <li><a href="#methodology">Methodology</a></li>
+          <li><a href="#analysis">Analysis & Results</a></li>
+          <li><a href="#visualizations">Visualizations</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#context-ethics">Context & Ethics</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+          <li><a href="#poster">Final Poster</a></li>
+        </ul>
+      </aside>
+
+      <div class="container">
+        <h2 id="context">Context</h2>
+        <p>The COVID-19 pandemic disrupted labor markets worldwide, shifting workplace norms and triggering sector-specific volatility. This project investigates how these disruptions were perceived in real-time by workers and whether employment trends could have been predicted from structured and unstructured data sources.</p>
+
+        <h2 id="overview">Overview</h2>
+        <p><strong>Job Waves</strong> is a collaborative data science capstone project for CSCI 1951A at Brown University. Our team of four explored U.S. Bureau of Labor Statistics (BLS) datasets and Reddit discourse to analyze employment trends from 2018–2023 across ten economic sectors. We framed three hypotheses, conducted sentiment and statistical analysis, and built predictive models to reveal hidden patterns in labor supply and demand dynamics.</p>
+
+        <h2 id="hypotheses">Hypotheses & Data</h2>
+        <ul>
+          <li><strong>H1:</strong> Online sentiment around employment shifted significantly across COVID phases.</li>
+          <li><strong>H2:</strong> Historical employment data has limited predictive power for future job openings.</li>
+          <li><strong>H3:</strong> Job opening-to-employee ratios increased substantially in essential sectors during the pandemic.</li>
+        </ul>
+        <p>We collected monthly BLS data on job openings, employee counts, and earnings, and scraped relevant Reddit posts using keyword and subreddit filters. These sources were temporally aligned and sector-mapped for multi-dimensional analysis. While each team member contributed to specific hypotheses, I (Jiwon Yoo) led the end-to-end analysis of Hypothesis 3, from data processing to statistical evaluation.</p>
+
+        <h2 id="methodology">Methodology</h2>
+        <p><strong>Sentiment Analysis:</strong> We applied a fine-tuned BERTweet model and augmented it with lexicon adjustments to enhance signal strength in emotionally neutral posts. Preprocessing included stopword filtering, regex cleansing, and sampling normalization.</p>
+        <p><strong>Predictive Modeling:</strong> Lag-based features from BLS job opening datasets were used to train XGBoost regressors under a rolling cross-validation framework. TimeSeriesSplit ensured temporal generalization while avoiding leakage.</p>
+        <p><strong>Hypothesis 3 (My Focus):</strong> I calculated a job openings-to-employees ratio metric by sector and performed Welch’s t-tests to compare pre-pandemic and pandemic periods. I controlled for sample variance, computed Cohen’s d to quantify magnitude of shifts, and ensured reproducibility across 10 sectors through bootstrapped resampling. My scripts include robust edge-case handling for missing entries in BLS data and sector-level time series slicing.</p>
+
+        <h2 id="analysis">Analysis & Results</h2>
+
+        <p><strong>H1 – Sentiment Shift:</strong> Across multiple sectors, sentiment polarity showed a statistically significant shift between Pre-COVID and COVID phases (p &lt; 0.001). The Information sector, for example, displayed an increase in negative sentiment density during the pandemic, as confirmed by chi-squared testing and violin plot visualization. This suggests heightened emotional response and uncertainty within affected industries.</p>
+
+        <p><strong>H2 – Predictive Modeling Accuracy:</strong> XGBoost models consistently outperformed naive baselines in most sectors, especially in Education and Healthcare, achieving lower NRMSE scores. Error distributions indicated strong generalization with low-variance predictions, while gain-based feature importance showed that both job openings and employee count became more predictive post-2020, suggesting shifts in market dynamics.</p>
+
+        <p><strong>H3 – Labor Shortages in Essential Sectors:</strong> Results confirmed significant structural labor shortages in sectors like Leisure & Hospitality, Healthcare, and Education. The average job openings-to-employee ratio rose dramatically post-COVID, with Leisure & Hospitality experiencing the steepest rise (+15.8 openings per employee). Statistical tests (Welch’s t-test and Cohen’s d) confirmed the strength and scale of the effect (Cohen’s d = 2.17). Bootstrapped validation across 10 sectors reinforced the robustness of this finding.</p>
+
+        <div class="jobwaves-visual">
+
+            <h2 id="visualizations" style="scroll-margin-top: 100px; position: relative;">Visualizations</h2>
+            
+            <h3>Hypothesis 1 – Sentiment Analysis</h3>
+            <div class="equal-height-row">
+              <div class="section">
+                <img src="./assets/hypo1-sentiment_analysis_information.png" alt="Sentiment Count and Distribution - Information Sector">
+                <p><strong>Left:</strong> Distribution of post sentiment across COVID phases (Information sector). <br><strong>Right:</strong> Violin plot showing sentiment score density. Chi-squared test confirms statistically significant shift (p &lt; 0.001).</p>
+              </div>
+            </div>
+            
+            <h3>Hypothesis 2 – Predictive Modeling</h3>
+            <div class="equal-height-row">
+              <div class="section">
+                <img src="./assets/hypo2-barplot_nrmse_comparison.png" alt="XGBoost vs Baseline NRMSE">
+                <p><strong>XGBoost vs Baseline:</strong> Most sectors show improved NRMSE over naive baselines, with better generalization in Education and Health sectors.</p>
+              </div>
+              <div class="section">
+                <img src="./assets/hypo2-histogram_nrmse.png" alt="NRMSE Distribution">
+                <p><strong>Error Spread:</strong> Histogram of NRMSE values across sectors indicates skew toward low error with few outliers in volatile industries.</p>
+              </div>
+            </div>
+            <div class="equal-height-row">
+              <div class="section">
+                <img src="./assets/hypo2-lineplot_Employee Count_importance.png" alt="Feature Importance - Employee Count">
+                <p><strong>Feature Importance:</strong> Gain-based analysis of employee count across time. Trade/Transport and Manufacturing show rising influence in predictions.</p>
+              </div>
+              <div class="section">
+                <img src="./assets/hypo2-lineplot_Job Openings_importance.png" alt="Feature Importance - Job Openings">
+                <p><strong>Temporal Shift:</strong> Importance of job openings increases markedly post-2020, suggesting change in predictive dynamics across folds.</p>
+              </div>
+            </div>
+            
+            <h3>Hypothesis 3 – Labor Shortage Analysis (Led by Jiwon Yoo)</h3>
+            <div class="equal-height-row">
+              <div class="section">
+                <img src="./assets/hypo3_labor_shortage_impact.png" alt="Labor Shortage Impact by Sector">
+                <p><strong>Magnitude of Change:</strong> Bar plot showing average increase in job openings per employee across sectors. Leisure sector leads with +15.8 openings.</p>
+              </div>
+              <div class="section">
+                <img src="./assets/hypo3-paired_means_barplot.png" alt="Pre vs COVID Period Ratio Comparison">
+                <p><strong>Before/After Comparison:</strong> Paired bars show absolute ratio shifts between Pre-COVID and COVID periods. Visualizes sectoral gaps at a glance.</p>
+              </div>
+            </div>
+            <div class="equal-height-row">
+              <div class="section">
+                <img src="./assets/hypo3-sector_trends.png" alt="Time Series of Job Openings per Employee">
+                <p><strong>Time Series Trends:</strong> Tracked ratio changes over time in four representative sectors. Notable structural shifts begin Q2 2020 and remain elevated.</p>
+              </div>
+            </div>
+            
+            </div>
+
+        <h2 id="challenges">Challenges</h2>
+        <ul>
+          <li>Subreddit coverage was inconsistent across sectors, complicating NLP generalizability.</li>
+          <li>API limits introduced temporal sparsity in Reddit post retrieval.</li>
+          <li>BLS data required aggressive imputation and filtering, particularly in less documented industries.</li>
+        </ul>
+
+        <h2 id="context-ethics">Socio-Historical Context & Ethical Considerations</h2>
+        <p>The study reflects a narrow demographic—Reddit users skew younger and tech-savvy—introducing selection bias. We maintained ethical data handling by avoiding PII storage and logging data source metadata. We acknowledge our analysis does not capture the full labor market spectrum, especially informal or underreported segments.</p>
+
+        <h2 id="reflection">Reflection</h2>
+        <p>This project provided a unique opportunity to lead sector-specific labor market analysis in a real-world, team-based setting. Through my focus on Hypothesis 3, I deepened my skills in statistical testing, time series segmentation, and data cleaning for noisy government datasets. Overall, the project bridged theoretical methods with socially meaningful insights and showed how blended data pipelines can inform economic decision-making in volatile times.</p>
+
+        <h2 id="poster">Final Poster</h2>
+        <img class="full-image" src="./assets/poster.png" alt="Final Poster" id="final-poster" style="cursor: zoom-in;">
+      </div>
+    </div>
+
+    <footer>
+      <p>CSCI1951A Data Science – Brown University, Spring 2025</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="Enlarged">
+        </div>
+      </div>
+      
+      <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+      
+        document.querySelectorAll(".jobwaves-visual img").forEach(img => {
+          img.style.cursor = 'zoom-in';
+          img.addEventListener("click", () => {
+            lightboxImg.src = img.src;
+            lightbox.style.display = "flex";
+          });
+        });
+      
+        lightbox.addEventListener("click", (e) => {
+          if (!e.target.closest('.lightbox-content')) {
+            lightbox.style.display = "none";
+            lightboxImg.src = "";
+          }
+        });
+      </script>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const tocLinks = document.querySelectorAll(".toc-nav a");
+          const sections = [...tocLinks].map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+          const offset = 140;
+      
+          function updateActiveLink() {
+            let currentId = null;
+            for (let i = sections.length - 1; i >= 0; i--) {
+              const section = sections[i];
+              if (section.getBoundingClientRect().top <= offset) {
+                currentId = section.id;
+                break;
+              }
+            }
+      
+            tocLinks.forEach(link => {
+              const href = link.getAttribute("href").substring(1);
+              link.classList.toggle("active", href === currentId);
+            });
+          }
+      
+          window.addEventListener("scroll", updateActiveLink);
+          window.addEventListener("resize", updateActiveLink);
+          updateActiveLink();
+      
+          // Lightbox setup
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImg = document.getElementById("lightbox-img");
+      
+          document.querySelectorAll(".jobwaves-visual img").forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener("click", () => {
+              lightboxImg.src = img.src;
+              lightbox.style.display = "flex";
+            });
+          });
+      
+          const finalPoster = document.getElementById("final-poster");
+          if (finalPoster) {
+            finalPoster.style.cursor = 'zoom-in';
+            finalPoster.addEventListener("click", () => {
+              lightboxImg.src = finalPoster.src;
+              lightbox.style.display = "flex";
+            });
+          }
+      
+          lightbox.addEventListener("click", (e) => {
+            if (!e.target.closest('.lightbox-content')) {
+              lightbox.style.display = "none";
+              lightboxImg.src = "";
+            }
+          });
+        });
+      </script>
+      
+          
+  </body>
+</html>
