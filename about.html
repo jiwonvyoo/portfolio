@@ -1,41 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | Jiwon Yoo</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Jiwon Yoo</title>
+    <script src="https://kit.fontawesome.com/67f90579cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </head>
 
-</head>
-<body>
-  <header id="navbar">
-    <nav class="top-nav">
-      <a href="index.html" class="logo">Jiwon Yoo</a>
-      <div class="nav-links">
-        <a href="index.html#projects">Projects</a>
-        <a href="about.html" class="active">About</a>
-        <a href="fun.html">Fun</a>
-        <a href="assets/resume.pdf" target="_blank">Resume</a>
-      </div>
-    </nav>
-  </header>  
+  <body>
+    <header id="navbar">
+      <nav class="top-nav">
+        <a href="index.html" class="logo">Jiwon Yoo</a>
+        <div class="nav-links">
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#case">Case Studies</a>
+          <a href="about.html" class="active">About</a>
+          <a href="assets/resume.pdf" target="_blank">Resume</a>
+        </div>
+      </nav>
+    </header>  
 
-  <h1 class="about-title">About Me</h1>
-
-  <main class="about-wrapper">
-    <div class="sticky-photo">
-      <img src="assets/profile.png" alt="Jiwon Yoo" />
+    <div class="toggle-buttons">
+      <button onclick="showSection('about')" class="toggle-btn active">About Me</button>
+      <button onclick="showSection('fun')" class="toggle-btn">When I'm Not Working</button>
     </div>
-    <div class="about-text">
-      <p>Hi, I’m <span class="highlight">Jiwon Yoo</span> — a product-minded problem solver with a global upbringing and a deep love for systems thinking.</p>
-      <p>🌏 Born in <span class="highlight">Seoul</span> and raised in <span class="highlight-green">Bangkok</span>, I’ve always navigated between cultures, languages, and perspectives. That adaptability now fuels how I approach product strategy: balancing user needs, technical feasibility, and business impact. I’m currently based in <span class="highlight">Providence, RI</span>, studying <span class="highlight">Applied Mathematics–Computer Science</span> at <span class="highlight-brown">Brown University</span>.</p>
-      <p>🏆 My journey started with a love for math. I earned the <span class="highlight">Top in the World Award</span> from Cambridge Outstanding Learners, a <span class="highlight-orange">Merit Award</span> from the British Math Olympiad, and finaled at World Mathematics Championship and South East Asia Math Championship. These experiences shaped how I think – analytical, logical and detail oriented.</p>
-      <p>👩‍💼 I’m currently diving into product development. At <span class="highlight-orange">Hanwha’s Global Internship Program Entrepreneurship Track in 2024</span>, I co-developed a B2C wellness app. I led product and business development, UX redesigns, scoping MVPs, and asking: <em>How can we design smarter, scale faster, and serve users better?</em></p>
-      <p>🧠 As an aspiring future product manager or a consultant, I thrive at the intersection of <span class="highlight">data</span>, <span class="highlight-purple">product</span>, and <span class="highlight-yellow">decision-making</span>. Whether I’m whiteboarding flows, digging into user interviews, or aligning stakeholders, I love turning ambiguity into clarity and ideas into outcomes.</p>
-      <p>🎨 Outside of work, I’m a logic puzzle lover, digital artist, and a martial artist (Taekwondo)! I find creativity not in contrast to analytics—but as its perfect partner.</p>
-      <p><b>Let’s build something <span class="highlight-orange">thoughtful</span> and <span class="highlight">impactful</span>. Together!</b></p>
+    
+    <div id="about-section" class="toggle-section">
+      <h1 class="about-title">About Me</h1>
+      <main class="about-wrapper">
+        <div class="sticky-photo">
+          <img src="assets/profile.png" alt="Jiwon Yoo" />
+        </div>
+        <div class="about-text">
+          <p>Hi, I’m <span class="highlight">Jiwon Yoo</span> — a product-minded problem solver with a global upbringing and a deep love for systems thinking.</p>
+          <p>🌏 Born in <span class="highlight">Seoul</span> and raised in <span class="highlight-green">Bangkok</span>, I’ve always navigated between cultures, languages, and perspectives. That adaptability now fuels how I approach product strategy: balancing user needs, technical feasibility, and business impact. I’m currently based in <span class="highlight">Providence, RI</span>, studying <span class="highlight">Applied Mathematics–Computer Science</span> at <span class="highlight-brown">Brown University</span>.</p>
+          <p>🏆 My journey started with a love for math. I earned the <span class="highlight">Top in the World Award</span> from Cambridge Outstanding Learners, a <span class="highlight-orange">Merit Award</span> from the British Math Olympiad, and finaled at World Mathematics Championship and South East Asia Math Championship. These experiences shaped how I think – analytical, logical and detail oriented.</p>
+          <p>👩‍💼 I’m currently diving into product development. At <span class="highlight-orange">Hanwha’s Global Internship Program Entrepreneurship Track in 2024</span>, I co-developed a B2C wellness app. I led product and business development, UX redesigns, scoping MVPs, and asking: <em>How can we design smarter, scale faster, and serve users better?</em></p>
+          <p>🧠 As an aspiring future product manager, business analyst or a consultant, I thrive at the intersection of <span class="highlight">data</span>, <span class="highlight-purple">product</span>, and <span class="highlight-yellow">decision-making</span>. Whether I’m whiteboarding flows, digging into user interviews, or aligning stakeholders, I love turning ambiguity into clarity and ideas into outcomes.</p>
+          <p>🎨 Outside of work, I’m a logic puzzle lover, digital artist, and a martial artist (Taekwondo)! I find creativity not in contrast to analytics—but as its perfect partner.</p>
+          <p><b>Let’s build something <span class="highlight-orange">thoughtful</span> and <span class="highlight">impactful</span>. Together!</b></p>
+        </div>
+      </main>
     </div>
-  </main>
-</body>
+    
+    <div id="fun-section" class="toggle-section hidden">
+      <main class="fun-wrapper">
+        <h1 class="about-title">When I'm not working...</h1>
+        <div class="fun-row">
+          <div class="fun-text">
+            <h2>🎨 Digital Art</h2>
+            <p>I love drawing realistic drawings on Procreate! I've been in charge of drawing senior portraits for graduating seniors for our Taekwondo club for the past 3 years :)</p>
+          </div>
+          <div class="fun-carousel-wrapper">
+            <div class="fun-carousel-track" id="carouselTrack">
+              <img src="assets/art/1.png" onclick="openLightbox(this)" />
+              <img src="assets/art/2.png" onclick="openLightbox(this)" />
+              <img src="assets/art/3.png" onclick="openLightbox(this)" />
+              <img src="assets/art/4.png" onclick="openLightbox(this)" />
+              <img src="assets/art/5.png" onclick="openLightbox(this)" />
+              <img src="assets/art/6.png" onclick="openLightbox(this)" />
+              <img src="assets/art/7.png" onclick="openLightbox(this)" />
+              <img src="assets/art/8.png" onclick="openLightbox(this)" />
+              <img src="assets/art/9.png" onclick="openLightbox(this)" />
+              <img src="assets/art/10.png" onclick="openLightbox(this)" />
+              <img src="assets/art/11.png" onclick="openLightbox(this)" />
+              <img src="assets/art/12.png" onclick="openLightbox(this)" />
+              <img src="assets/art/13.png" onclick="openLightbox(this)" />
+              <img src="assets/art/14.png" onclick="openLightbox(this)" />
+              <img src="assets/art/15.png" onclick="openLightbox(this)" />
+              <img src="assets/art/16.png" onclick="openLightbox(this)" />
+              <img src="assets/art/17.png" onclick="openLightbox(this)" />
+              <img src="assets/art/18.png" onclick="openLightbox(this)" />
+              <img src="assets/art/19.png" onclick="openLightbox(this)" />
+              <img src="assets/art/20.png" onclick="openLightbox(this)" />
+            </div>
+          </div>
+        </div>
+  
+        <br>
+        <div class="fun-row">
+          <div class="fun-text">
+            <h2>🥋 Taekwondo</h2>
+            <p>I've been doing Taekwondo for 11 years! It taught me discipline, strength, and respect. Whether training or competing, it's always been a grounding part of who I am.</p>
+          </div>
+          <div class="fun-carousel-wrapper">
+            <div class="fun-carousel-track" id="carouselTrack">
+              <img src="assets/tkd/1.png" onclick="openLightbox(this)" />
+              <img src="assets/tkd/2.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/3.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/4.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/5.JPEG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/6.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/7.png" onclick="openLightbox(this)" />
+              <img src="assets/tkd/8.JPEG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/9.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/10.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/11.HEIC" onclick="openLightbox(this)" />
+              <img src="assets/tkd/12.JPEG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/13.jpg" onclick="openLightbox(this)" />
+              <img src="assets/tkd/14.jpeg" onclick="openLightbox(this)" />
+              <img src="assets/tkd/15.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/16.jpg" onclick="openLightbox(this)" />
+              <img src="assets/tkd/17.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/18.jpeg" onclick="openLightbox(this)" />
+              <img src="assets/tkd/19.JPG" onclick="openLightbox(this)" />
+              <img src="assets/tkd/20.jpg" onclick="openLightbox(this)" />
+              <img src="assets/tkd/21.png" onclick="openLightbox(this)" />
+              <img src="assets/tkd/22.png" onclick="openLightbox(this)" />
+              <img src="assets/tkd/23.png" onclick="openLightbox(this)" />
+              <img src="assets/tkd/24.png" onclick="openLightbox(this)" />
+            </div>
+          </div>
+        </div>
+  
+        <br>
+        <div class="fun-row">
+          <div class="fun-text">
+            <h2>🗺️ Adventures</h2>
+            <p>I love wandering through new cities, trying local foods, and spending time with people! Exploring the world keeps me curious and creative.</p>
+          </div>
+          <div class="fun-carousel-wrapper">
+            <div class="fun-carousel-track" id="carouselTrack">
+              <img src="assets/travel/1.JPG" onclick="openLightbox(this)" />
+              <img src="assets/travel/2.JPG" onclick="openLightbox(this)" />
+              <img src="assets/travel/3.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/4.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/5.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/6.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/7.JPG" onclick="openLightbox(this)" />
+              <img src="assets/travel/8.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/9.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/10.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/11.png" onclick="openLightbox(this)" />
+              <img src="assets/travel/12.png" onclick="openLightbox(this)" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:jiwon_yoo@brown.edu" target="_blank" class="fa fa-envelope social-icon" aria-hidden="true"></a>
+      <a href="https://github.com/jiwonvyoo" target="_blank" class="fa fab fa-github social-icon" aria-hidden="true"></a>
+      <a href="https://www.linkedin.com/in/jiwon-v-yoo" target="_blank" class="fa fa-linkedin social-icon" aria-hidden="true"></a>
+    </div>
+    <p>© 2025 Jiwon Yoo</p>
+  </footer>
+  <script>
+    function showSection(sectionId) {
+      // Hide both sections
+      document.getElementById('about-section').classList.add('hidden');
+      document.getElementById('fun-section').classList.add('hidden');
+  
+      // Remove 'active' class from all buttons
+      const buttons = document.querySelectorAll('.toggle-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+  
+      // Show the selected section
+      document.getElementById(`${sectionId}-section`).classList.remove('hidden');
+  
+      // Highlight the active button
+      if (sectionId === 'about') {
+        buttons[0].classList.add('active');
+      } else {
+        buttons[1].classList.add('active');
+      }
+    }
+  </script>
+  
 </html>

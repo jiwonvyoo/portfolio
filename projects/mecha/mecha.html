@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jiwon Yoo</title>
+  <script src="https://kit.fontawesome.com/67f90579cc.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../project-styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -15,8 +16,8 @@
       <a href="../../index.html" class="logo">Jiwon Yoo</a>
       <div class="nav-links">
         <a href="../../index.html#projects">Projects</a>
+        <a href="../../index.html#case">Case Studies</a>
         <a href="../../about.html">About</a>
-        <a href="../../fun.html">Fun</a>
         <a href="../../assets/resume.pdf" target="_blank">Resume</a>
       </div>
     </nav>
@@ -24,9 +25,8 @@
 
   <section class="project-hero">
     <div class="hero-content">
-      <h1 class="project-title">Iterative Design and Evaluation</h1>
-      <p class="project-subtitle">A collaborative design project to improve an AI-powered radiology interface for Mecha Health.</p>
-
+      <h1 class="project-title">Mecha Health – Designing for Decisions</h1>
+      <p class="project-subtitle">Enhancing clarity and trust in an AI-powered radiology tool through iterative, research-driven design.</p>
       <div class="hero-details">
         <div class="detail-block">
           <p class="detail-label">Team</p>
@@ -34,15 +34,16 @@
         </div>
         <div class="detail-block">
           <p class="detail-label">Timeline</p>
-          <p class="detail-value">3 weeks, February 2025</p>
+          <p class="detail-value">February 2025</p>
         </div>
         <div class="detail-block">
           <p class="detail-label">Skills</p>
           <div class="tags">
+            <span class="tag">Product Thinking</span>
             <span class="tag">Iterative Design</span>
-            <span class="tag">User Testing</span>
-            <span class="tag">Lofi & Hifi Design</span>
-            <span class="tag">Wireframing</span>
+            <span class="tag">User Research</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Figma</span>
           </div>
         </div>
       </div>
@@ -54,149 +55,113 @@
       <p class="toc-title">On this page</p>
       <ul>
         <li><a href="#context">Context</a></li>
-        <li><a href="#sketches">Sketches</a></li>
-        <li><a href="#decisions">Design Decisions</a></li>
-        <li><a href="#wireframes">Wireframes</a></li>
-        <li><a href="#final">Final Prototype</a></li>
-        <li><a href="#testing">User Testing</a></li>
+        <li><a href="#problem">Problem Framing</a></li>
+        <li><a href="#process">Design Process</a></li>
+        <li><a href="#solution">Final Solution</a></li>
+        <li><a href="#validation">User Testing</a></li>
+        <li><a href="#ba">Business Analysis Thinking</a></li>
         <li><a href="#reflection">Reflection</a></li>
       </ul>
     </aside>
 
     <div class="container">
-      <h2 id="context">Context, Interface, and Users Impacted</h2>
-<p>In fast-paced clinical settings, every second counts. Our team partnered with <b>Mecha Health</b>, a startup building AI-powered tools to accelerate radiology workflows. Their mission: reduce the time it takes to analyze an X-ray from one scan per hour to just five minutes. We were tasked with designing an intuitive desktop interface for radiologists and clinical techs—helping them move quickly, confidently, and with minimal cognitive overhead. Though patients never see this tool directly, they benefit from the efficiency it brings to diagnosis and care delivery.</p>
+      <h2 id="context">Context</h2>
+      <p>This project was part of <strong>CSCI 1300: Interactive Design</strong>, a course that challenged us to go through the full lifecycle of product development—from ideation to user testing—by working directly with a real-world startup. Our team partnered with <strong>Mecha Health</strong>, a company building AI-powered radiology tools to accelerate diagnostic workflows. Our mission: design a multi-screen interactive prototype from scratch that could help reduce radiology review time from one hour to just five minutes.</p>
+      <p>In fast-paced clinical environments, every interface must amplify—not obstruct—care delivery. While patients never interact with this tool, its design has a direct impact on diagnosis speed and ultimately, treatment outcomes. We approached this challenge with a strong appreciation for the high-stakes context and the cognitive load radiologists face.</p>
+      <p>This project emphasized key areas I now consider foundational to product thinking: the importance of rapid ideation, iterative refinement through critique, collaborative team workflows, and user-centered validation. Communicating with Mecha Health throughout helped ensure that our final product wasn’t just visually polished—but practically relevant, strategically scoped, and backed by user research at every stage.</p>
 
-<h2 id="sketches">Sketches</h2>
-<p>We began with rapid low-fidelity sketches to explore key design principles: clarity, speed, and trust. The sketches helped us test layout hypotheses and prioritize what matters most—like X-ray visibility and streamlined interaction.</p>
+      <h2 id="problem">Problem Framing</h2>
+      <p>We grounded our work using the <strong>HEART Framework</strong> (Happiness, Engagement, Adoption, Retention, Task success) to identify what mattered most. Based on initial feedback and stakeholder interviews, we prioritized:</p>
+      <ul>
+        <li><strong>Task Success:</strong> Enable radiologists to locate, assess, and approve scans quickly and confidently.</li>
+        <li><strong>Engagement:</strong> Design with clarity to reduce friction and cognitive load.</li>
+        <li><strong>Adoption:</strong> Create a welcoming interface for new users without prior training.</li>
+      </ul>
+      <p>With that, our product goal became clear: <mark>make AI insights accessible and trustworthy within a frictionless, clinical-grade interface</mark>.</p>
 
-<h4>Desktop Sketch 1</h4>
-<img src="./assets/mechahealthinitsketch.png" class="full-image" alt="Desktop Sketch 1">
-<ul>
-  <li>We centered the X-ray display to align with radiologists' visual habits, while segmenting AI analysis in a side panel for quick review.</li>
-  <li>A bottom carousel allowed seamless navigation across scans without breaking focus.</li>
-</ul>
+      <h2 id="process">Design Process</h2>
+      <h3>1. Discovery & Ideation</h3>
+      <p>We kicked off with <strong>lo-fi sketches</strong> across platforms (desktop/tablet) to test layout hypotheses. Drawing on Jobs-To-Be-Done theory, we asked: "What jobs are radiologists hiring this tool to do?" The answer shaped our layout around the X-ray viewport as the visual center, flanked by AI analysis, navigation, and upload utilities.</p>
+      <div class="equal-height-row">
+        <img src="./assets/mechahealthinitsketch.png" alt="Initial Sketch">
+        <img src="./assets/tablet1.png" alt="Tablet Sketch">
+      </div>
+      <p>Design principles guiding these sketches included:</p>
+      <ul>
+        <li><strong>Visual Hierarchy:</strong> X-ray first, AI second, navigation third.</li>
+        <li><strong>Speed:</strong> Minimize clicks-to-diagnosis.</li>
+        <li><strong>Trust:</strong> Reduce clutter and emphasize medical reliability.</li>
+      </ul>
 
-<h4>Tablet Sketch 1</h4>
-<img src="./assets/tablet1.png" class="full-image" alt="Tablet Sketch 1">
-<ul>
-  <li>For tablet users, we condensed non-essential content into expandable sections—preserving core functionality in a mobile-friendly layout.</li>
-</ul>
+      <h3>2. Rapid Prototyping</h3>
+      <p>We developed mid-fidelity wireframes and gathered feedback in two cycles of critique. Notable updates post-feedback:</p>
+      <ul>
+        <li>Added persistent login/profile features for workflow continuity.</li>
+        <li>Converted horizontal scan carousel to vertical for easier thumb access.</li>
+        <li>Replaced text-dense UI with color-coded icons and collapsible panels.</li>
+        <li>Streamlined edit/approve actions to reduce misclicks during high-stakes moments.</li>
+      </ul>
+      <img src="./assets/bms2.png" class="full-image" alt="Updated Scan Page">
 
-<h4>Desktop Sketch 2</h4>
-<div class="equal-height-row">
-  <div class="section"><img src="./assets/desktop21.png" alt="Desktop Sketch 2-1" /></div>
-  <div class="section"><img src="./assets/desktop22.png" alt="Desktop Sketch 2-2" /></div>
-</div>
-<ul>
-  <li>These iterations emphasized visual simplicity—large icons, minimal copy, and strong spatial cues.</li>
-  <li>The focus was on quickly onboarding new users and reducing interface noise.</li>
-</ul>
+      <h3>3. High-Fidelity Execution</h3>
+      <p>Our final Figma prototype used a professional, muted color palette (navy, gray, white) with subtle chrome details, preserving both usability and a sense of trustworthiness. We structured our design with Nielsen’s Heuristics in mind—especially visibility of system status and recognition over recall.</p>
 
-<h4>Tablet Sketch 2</h4>
-<div class="equal-height-row">
-  <div class="section"><img src="./assets/tablet21.png" alt="Tablet Sketch 2-1" /></div>
-  <div class="section"><img src="./assets/tablet22.png" alt="Tablet Sketch 2-2" /></div>
-</div>
-<ul>
-  <li>We introduced responsive design patterns like hamburger menus and scalable content blocks for a smooth transition across devices.</li>
-</ul>
+      <div class="equal-height-row">
+        <img src="./assets/hfscan.png" alt="Scan Report">
+        <img src="./assets/hfspot.png" alt="Spot Analysis">
+      </div>
 
-<h2 id="decisions">Design Decisions</h2>
-<p>From sketches to structure, every decision was made with one question in mind: what would support radiologists the most during high-stakes diagnosis?</p>
+      <p><b>View Prototype:</b> <a href="https://www.figma.com/design/4IUXrHO1lsUBFQBXD6qF8d/Iterative-Design-Hifi?node-id=0-1&t=LK9aBsMlr0yr4GBZ-1" target="_blank">Figma</a> | <a href="https://www.loom.com/share/e3301348cce2463d953b2f950e0a3f19" target="_blank">Loom</a></p>
 
-<h4>Homepage</h4>
-<ul>
-  <li>We kept the landing page minimal—anchoring it in trust. A clean intro, clear mission, and fast path to action.</li>
-</ul>
+      <h2 id="solution">Final Solution</h2>
+      <p>The redesigned interface offered:</p>
+      <ul>
+        <li><strong>AI Summaries by Default:</strong> We surfaced findings upfront to guide the diagnostic workflow.</li>
+        <li><strong>Contextual Navigation:</strong> Seamless scan-to-scan comparison via vertically stacked thumbnails.</li>
+        <li><strong>Annotation Tools:</strong> Click-to-highlight symptoms with toggled AI overlays.</li>
+        <li><strong>Approval Actions:</strong> Consolidated CTA for clarity: Approve, Edit, Flag.</li>
+      </ul>
 
-<h4>Folder</h4>
-<ul>
-  <li>We designed a centralized scan hub that emphasized recall and organization. Drag-and-drop uploads, timestamped scan cards, and preview thumbnails gave users a clear mental model.</li>
-  <li>We also considered future enhancements, like review status indicators, to avoid redundant reads and boost review efficiency.</li>
-</ul>
+      <h2 id="validation">User Testing</h2>
+      <p>We ran qualitative testing with 5 users simulating radiologist workflows. Our scenario: "You’ve just received 3 scans. Identify the issue in each, and approve or flag accordingly." Key insights:</p>
+      <ul>
+        <li><strong>Positive:</strong> Visual hierarchy was clear. Most users naturally started where we expected.</li>
+        <li><strong>Gap:</strong> Users skipped the AI summary modal by clicking scan thumbnails first.</li>
+      </ul>
+      <p>This showed a need for better <strong>onboarding nudges</strong> or adjusted default states to spotlight Mecha’s core value prop: AI-driven insight. In future iterations, I’d introduce a first-time-user flow and usage funnel tracking to monitor drop-offs and optimize UX entry points.</p>
 
-<h4>Upload</h4>
-<ul>
-  <li>Upload flow was intentionally spare: one large CTA with a progress bar, supporting quick, confident actions under time pressure.</li>
-</ul>
+      <section id="ba" style="border: 2px dashed #ccc; background-color: #f9f9f9; padding: 2rem; margin-top: 3rem;">
+        <h3>Business Analysis Thinking <span style="font-size: 0.8em; font-weight: normal;">(Standalone Addendum)</span></h3>
+        <p>This section was developed independently from our main project as part of my personal curiosity around startups, product thinking, and how early-stage ideas translate into meaningful impact. While our team collaborated on the Mecha Health prototype, I took time after the project to reflect on the broader strategic value of our work—how design decisions map to real-world workflows, organizational goals, and product viability. This exercise helped me think beyond usability alone and consider how thoughtful design contributes to long-term success and scalable solutions.</p>
 
-<h4>Diagnosis</h4>
-<ul>
-  <li>This screen became our focal point. A large X-ray window provided clarity, with dynamic annotations linked to AI-flagged findings.</li>
-  <li>We enabled toggling symptoms on/off and offered a clean sidebar with diagnosis suggestions and approval/edit actions. The bottom carousel supported lateral navigation across scans.</li>
-</ul>
+        <h4>📊 Outcome-Driven Framing</h4>
+        <p>For <strong>Mecha Health</strong>, I mapped the radiologist workflow end-to-end and identified key friction points affecting throughput. Our goal wasn’t just usability—it was to reduce bottlenecks, minimize misreads, and improve scan turnaround time. A 5x efficiency improvement meant not only faster diagnoses but also potential reductions in operational costs and improved resource allocation.</p>
+        
+        <h4>🧩 Requirements Analysis</h4>
+        <p>I consistently translated ambiguous goals into structured feature requirements. For example, when radiologists reported overwhelm from dense interfaces, I proposed feature-level changes (e.g., collapsible panels, color-coded icons) that reduced cognitive load—prioritizing clarity without sacrificing diagnostic control. These were validated through user testing and iteration cycles.</p>
+        
+        <h4>📈 Value Metrics</h4>
+        <p>While we did not have access to production analytics, we simulated key metrics during testing: navigation path adherence, task completion time, and summary recall rates. In a live setting, I would track these KPIs post-launch to measure task success (HEART), optimize onboarding (activation rate), and track retention across diagnostic sessions.</p>
+        
+        <h4>🤝 Stakeholder Alignment</h4>
+        <p>Through continuous communication with Mecha Health’s product team, I ensured our prototype aligned with their technical constraints and roadmap. This experience helped me strengthen my ability to balance user goals with engineering feasibility—a critical BA responsibility.</p>
+        
+        <p>Ultimately, I view my role not only as a designer or developer, but as a translator between business needs, user behavior, and technical solutions.</p>
+        </section>
 
-<h2 id="wireframes">Wireframes</h2>
-<p>We translated our decisions into wireframes using Balsamiq, gradually refining the interface with feedback from real users and designers.</p>
-
-<h4>Homepage</h4>
-<img src="./assets/bmhp.png" class="full-image" alt="Homepage Wireframe">
-
-<h4>Interactive Rive Prototype</h4>
-<iframe style="border: none; width: 100%; max-width: 1024px; height: 768px;" src="https://rive.app/s/18Lfs3F0zEqPbQ60pFXnsQ/embed?runtime=rive-renderer" allowfullscreen allow="autoplay"></iframe>
-
-<h4>Other Screens</h4>
-<div class="equal-height-row">
-  <img src="./assets/bmf.png" class="equal-height-row" alt="Folder Page">
-  <img src="./assets/bmu.png" class="equal-height-row" alt="Upload Page">
-</div>
-<img src="./assets/bms.png" class="full-image" alt="Scan Page">
-<img src="./assets/bms2.png" class="full-image" alt="Expanded Scan">
-
-<h4>Critique Highlights</h4>
-<ul>
-  <li>Need for login/profile system</li>
-  <li>Better visual markers for scan approval</li>
-  <li>Increased interactivity and feedback cues</li>
-  <li>Clarified edit/approve functionality</li>
-  <li>Improved carousel interaction and scan orientation</li>
-</ul>
-
-<h4>Post-Critique Changes</h4>
-<ul>
-  <li><b>Profile Icon:</b> We implemented persistent navigation and login for continuity.</li>
-  <li><b>Carousel:</b> Added directional arrows and converted layout to vertical—easier thumb reach and visual clarity.</li>
-  <li><b>Visual Language:</b> Replaced dense text with color-coded icons and collapsible tabs to reduce overload.</li>
-  <li><b>Edit/Approve Toggle:</b> Removed unnecessary options to streamline user path.</li>
-</ul>
-
-<h4>Visual Polish</h4>
-<p>We unified the product with a muted, clinical color palette (navy, white, gray) and subtle chrome-tab design cues, reinforcing the product’s professional tone without feeling sterile.</p>
-
-<h2 id="final">Final Hi-Fi Prototype</h2>
-<div class="equal-height-row">
-  <img src="./assets/hfhome.png" class="full-image" alt="Homepage">
-  <img src="./assets/hffoldergrid.png" class="full-image" alt="Folder Grid">
-  <img src="./assets/hffolderlist.png" class="full-image" alt="Folder List">
-  <img src="./assets/hfsettings.png" class="full-image" alt="Settings">
-  <img src="./assets/hfscan.png" class="full-image" alt="Scan Report">
-  <img src="./assets/hfspot.png" class="full-image" alt="Spot Analysis">
-</div>
-
-<p><b>Loom Walkthrough:</b> <a href="https://www.loom.com/share/e3301348cce2463d953b2f950e0a3f19?sid=a522c66f-8e86-411d-b97a-e3d6e16fcb8c" target="_blank">Watch here</a></p>
-<p><b>Figma Prototype:</b> <a href="https://www.figma.com/design/4IUXrHO1lsUBFQBXD6qF8d/Iterative-Design-Hifi?node-id=0-1&t=LK9aBsMlr0yr4GBZ-1" target="_blank">View in Figma</a></p>
-
-<h2 id="testing">User Testing</h2>
-<p>We observed how users interacted with the live prototype, asking them to locate the spot analysis and identify an AI-generated summary. This tested their ability to navigate, interpret, and act within the interface under minimal instruction.</p>
-
-<h4>Findings</h4>
-<ul>
-  <li>Most users followed the same navigation path—indicating strong visual hierarchy.</li>
-  <li>However, users clicked scan nodes before opening the summary, unintentionally skipping the app’s main feature.</li>
-</ul>
-
-<p>This insight was critical. It told us that even well-designed features need stronger visibility cues or default states. For future iterations, we’d surface the summary by default—so users immediately engage with the AI-powered diagnosis that defines Mecha’s value.</p>
-
-<h2 id="reflection">Reflection</h2>
-<p>This was one of the most collaborative, research-grounded design processes I’ve experienced. Working across disciplines and iterating fast taught me how to balance bold ideas with rigorous feedback. Our design evolved with every critique—and that evolution was the most valuable part.</p>
-
-<p>What I’m most proud of is the clarity we built into a high-stakes product. Our design doesn’t just work—it supports decision-making, reduces stress, and ultimately contributes to better patient care.</p>
+      <h2 id="reflection">Reflection</h2>
+      <p>This project wasn’t just about UI—it was about <mark>building clinical trust through design</mark>. From stakeholder alignment to usability critiques, I gained hands-on practice balancing user needs, technical constraints, and business priorities. It deepened my understanding of <strong>design sprints</strong>, cross-functional collaboration, and how thoughtful UX can drive product adoption in mission-critical environments.</p>
+      <p>This experience solidified my belief that great design is product strategy. When teams build with empathy and rigor, the result is not just a better interface—but better care.</p>
     </div>
-  </div>
+</div>
 
-  <footer>
-    <p>CSCI1300 Spring 2025 – Jiwon Yoo</p>
+<footer>
+    <div class="footer-icons">
+      <a href="mailto:jiwon_yoo@brown.edu" target="_blank" class="fa fa-envelope social-icon" aria-hidden="true"></a>
+      <a href="https://github.com/jiwonvyoo" target="_blank" class="fa fab fa-github social-icon" aria-hidden="true"></a>
+      <a href="https://www.linkedin.com/in/jiwon-v-yoo" target="_blank" class="fa fa-linkedin social-icon" aria-hidden="true"></a>
+    </div>
+    <p>© 2025 Jiwon Yoo</p>
   </footer>
 
   <script>
@@ -205,49 +170,49 @@
       const sections = Array.from(tocLinks).map(link =>
         document.querySelector(link.getAttribute("href"))
       );
-  
+
       window.addEventListener("scroll", () => {
         const scrollPosition = window.scrollY + 140;
-  
+
         let currentId = "";
         sections.forEach(section => {
           if (scrollPosition >= section.offsetTop) {
             currentId = section.id;
           }
         });
-  
+
         tocLinks.forEach(link => {
           link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
         });
       });
     });
-  </script> 
+  </script>
 
-<div id="lightbox" class="lightbox">
-  <div class="lightbox-content">
-    <img id="lightbox-img" src="" alt="Enlarged">
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Enlarged">
+    </div>
   </div>
-</div>
 
-<script>
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-  document.querySelectorAll("img").forEach(img => {
-    if (img.id !== "lightbox-img") {
-      img.addEventListener("click", () => {
-        lightboxImg.src = img.src;
-        lightbox.style.display = "flex";
-      });
-    }
-  });
+    document.querySelectorAll("img").forEach(img => {
+      if (img.id !== "lightbox-img") {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.style.display = "flex";
+        });
+      }
+    });
 
-  lightbox.addEventListener("click", (e) => {
-    if (!e.target.closest('.lightbox-content')) {
-      lightbox.style.display = "none";
-      lightboxImg.src = "";
-    }
-  });
-</script>
+    lightbox.addEventListener("click", (e) => {
+      if (!e.target.closest('.lightbox-content')) {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+  </script>
 </body>
 </html>
