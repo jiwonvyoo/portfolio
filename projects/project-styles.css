@@ -442,7 +442,6 @@ img {
   padding: 0.6rem 1.2rem;
   background-color: #457b9d;
   color: white;
-  border: none;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
@@ -461,6 +460,7 @@ img {
   align-self: flex-start;
   background: #fff;
   border-left: 4px solid #eee;
+  padding-top: 1rem;
   padding-left: 1rem;
   font-size: 0.95rem;
   line-height: 1.6;

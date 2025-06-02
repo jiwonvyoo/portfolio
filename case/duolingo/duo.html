@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiwon Yoo</title>
+    <script src="https://kit.fontawesome.com/67f90579cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../projects/project-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>html {scroll-behavior: smooth;}</style>
+  </head>
+  <body>
+    <header id="navbar">
+      <nav class="top-nav">
+        <a href="../../index.html" class="logo">Jiwon Yoo</a>
+        <div class="nav-links">
+          <a href="../../index.html#projects">Projects</a>
+          <a href="../../index.html#case">Case Studies</a>
+          <a href="../../about.html">About</a>
+          <a href="../../assets/resume.pdf" target="_blank">Resume</a>
+        </div>
+      </nav>
+    </header>
+    <section class="project-hero">
+      <div class="hero-content">
+        <h1 class="project-title">Duolingo</h1>
+        <p class="project-subtitle">Enhancing learning experience...</p>
+        <div class="hero-details">
+          <div class="detail-block">
+            <p class="detail-label">Timeline</p>
+            <p class="detail-value">Summer 2025</p>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">Skills</p>
+            <div class="tags">
+              <span class="tag">Product Strategy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-wrapper">
+      <aside class="toc-nav">
+        <p class="toc-title">On this page</p>
+        <ul>
+          <li><a href="#context">Context</a></li>
+          <li><a href="#context">Research</a></li>
+          <li><a href="#context">Problem & Goals</a></li>
+          <li><a href="#context">Solutions</a></li>
+          <li><a href="#context">KPIs</a></li>
+          <li><a href="#context">Summary</a></li>
+          <li><a href="#context">Reflection</a></li>
+        </ul>
+      </aside>
+
+      <div class="container">
+        <h2 id="context">Context</h2>
+        <p></p>
+        
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="mailto:jiwon_yoo@brown.edu" target="_blank" class="fa fa-envelope social-icon" aria-hidden="true"></a>
+      <a href="https://github.com/jiwonvyoo" target="_blank" class="fa fab fa-github social-icon" aria-hidden="true"></a>
+      <a href="https://www.linkedin.com/in/jiwon-v-yoo" target="_blank" class="fa fa-linkedin social-icon" aria-hidden="true"></a>
+    </div>
+    <p>© 2025 Jiwon Yoo</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tocLinks = document.querySelectorAll(".toc-nav a");
+      const sections = Array.from(tocLinks).map(link =>
+        document.querySelector(link.getAttribute("href"))
+      );
+  
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY + 140;
+  
+        let currentId = "";
+        sections.forEach(section => {
+          if (scrollPosition >= section.offsetTop) {
+            currentId = section.id;
+          }
+        });
+  
+        tocLinks.forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
+        });
+      });
+    });
+  </script> 
+
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Enlarged">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tocLinks = document.querySelectorAll(".toc-nav a");
+      const sections = Array.from(tocLinks).map(link =>
+        document.querySelector(link.getAttribute("href"))
+      );
+  
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY + 140;
+        let currentId = "";
+        sections.forEach(section => {
+          if (scrollPosition >= section.offsetTop) {
+            currentId = section.id;
+          }
+        });
+  
+        tocLinks.forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
+        });
+      });
+  
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+  
+      document.querySelectorAll(".equal-height-row img, .feature-media img, .full-image").forEach(img => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightbox.style.display = "flex";
+        });
+      });
+  
+      lightbox.addEventListener("click", (e) => {
+        if (!e.target.closest(".lightbox-content")) {
+          lightbox.style.display = "none";
+          lightboxImg.src = "";
+        }
+      });
+    });
+  </script>
+</html>

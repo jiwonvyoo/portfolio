@@ -476,7 +476,7 @@ img {
 .fun-carousel-track {
   display: inline-flex;
   gap: 1rem;
-  animation: scrollAuto 30s linear infinite;
+  /* animation: scrollAuto 30s linear infinite; */
 }
 
 .fun-carousel-track img {
@@ -493,14 +493,14 @@ img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-@keyframes scrollAuto {
+/* @keyframes scrollAuto {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 .lightbox {
   display: none;

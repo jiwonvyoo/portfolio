@@ -50,7 +50,7 @@
         <h1 class="about-title">When I'm not working...</h1>
         <div class="fun-row">
           <div class="fun-text">
-            <h2>🎨 Digital Art</h2>
+            <h2>🎨 Art</h2>
             <p>I love drawing realistic drawings on Procreate! I've been in charge of drawing senior portraits for graduating seniors for our Taekwondo club for the past 3 years :)</p>
           </div>
           <div class="fun-carousel-wrapper">
@@ -118,7 +118,7 @@
         <br>
         <div class="fun-row">
           <div class="fun-text">
-            <h2>🗺️ Adventures</h2>
+            <h2>🗺️ Exploring</h2>
             <p>I love wandering through new cities, trying local foods, and spending time with people! Exploring the world keeps me curious and creative.</p>
           </div>
           <div class="fun-carousel-wrapper">
@@ -151,20 +151,22 @@
     </div>
     <p>© 2025 Jiwon Yoo</p>
   </footer>
+
+  <!-- <script>
+    const track = document.getElementById('carouselArtTrack');
+    track.innerHTML += track.innerHTML;
+  </script>
+   -->
   <script>
     function showSection(sectionId) {
-      // Hide both sections
       document.getElementById('about-section').classList.add('hidden');
       document.getElementById('fun-section').classList.add('hidden');
   
-      // Remove 'active' class from all buttons
       const buttons = document.querySelectorAll('.toggle-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
   
-      // Show the selected section
       document.getElementById(`${sectionId}-section`).classList.remove('hidden');
-  
-      // Highlight the active button
+
       if (sectionId === 'about') {
         buttons[0].classList.add('active');
       } else {
@@ -172,5 +174,28 @@
       }
     }
   </script>
-  
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full view" />
+  </div>
+
+  <script>
+    function openLightbox(img) {
+      document.getElementById("lightbox-img").src = img.src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    function pauseScroll() {
+      document.getElementById("carouselTrack").style.animationPlayState = 'paused';
+    }
+
+    function resumeScroll() {
+      document.getElementById("carouselTrack").style.animationPlayState = 'running';
+    }
+  </script>  
 </html>
