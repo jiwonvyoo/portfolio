@@ -21,22 +21,25 @@
         </div>
       </nav>
     </header>
+
     <section class="project-hero">
       <div class="hero-content">
         <h1 class="project-title">Duolingo</h1>
-        <p class="project-subtitle">Enhancing learning experience...</p>
+        <p class="project-subtitle">Beyond the Streak: Turning Daily Check-ins into Lasting Learning Habits on Duolingo</p>
         <div class="hero-details">
           <div class="detail-block">
-            <p class="detail-label">Timeline</p>
-            <p class="detail-value">Summer 2025</p>
+            <div class="detail-label">Role</div>
+            <div class="detail-value">Product Strategy & UX</div>
           </div>
           <div class="detail-block">
-            <p class="detail-label">Skills</p>
-            <div class="tags">
-              <span class="tag">Product Strategy</span>
-            </div>
+            <div class="detail-label">Details</div>
+            <div class="detail-value">Independent Case</div>
           </div>
-        </div>
+          <div class="detail-block">
+            <div class="detail-label">Focus</div>
+            <div class="detail-value">User Engagement Strategy, Behavior Design, Product Analytics</div>
+          </div>
+        </div>        
       </div>
     </section>
 
@@ -44,20 +47,313 @@
       <aside class="toc-nav">
         <p class="toc-title">On this page</p>
         <ul>
-          <li><a href="#context">Context</a></li>
-          <li><a href="#context">Research</a></li>
-          <li><a href="#context">Problem & Goals</a></li>
-          <li><a href="#context">Solutions</a></li>
-          <li><a href="#context">KPIs</a></li>
-          <li><a href="#context">Summary</a></li>
-          <li><a href="#context">Reflection</a></li>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#pg">Problem & Goal</a></li>
+          <li><a href="#current">Current Features</a></li>
+          <li><a href="#solution">Solution</a></li>
+          <li><a href="#kpis">KPIs</a></li>
+          <li><a href="#risks">Risks</a></li>
+          <li><a href="#other">Other Exploratory Solutions</a></li>
+          <li><a href="#next">Next Steps</a></li>
+          <li><a href="#reflection">Reflection</a></li>
         </ul>
       </aside>
 
       <div class="container">
-        <h2 id="context">Context</h2>
-        <p></p>
-        
+        <h2 id="overview">Overview</h2>
+        <p>Duolingo's gamified experience has achieved widespread engagement by encouraging users to log in daily. Yet, many users stop at just one lesson—primarily to preserve their streak rather than to make meaningful language progress. As a user myself, I love the app and think it's a fantastic way to get started with a new language. But even after 400 days streak, I often feel like I'm still a beginner. Eventually, I find myself doing just one lesson a day—not to learn, but to maintain my streak and keep up with my friends.</p>
+        <p>This case study uses a product-driven approach to investigate what I call the <strong>“Streak Plateau”</strong>: high-frequency, low-depth engagement. I apply the Double Diamond framework to discover and define core user challenges, and then develop a solution aimed at building deeper learning habits—especially for users currently motivated by extrinsic cues like streaks and leaderboards.</p>
+        <p><em>How might we help users turn daily Duolingo check-ins into meaningful learning sessions—without losing the motivational power of streaks?</em></p>
+        <br>
+        <a href="#solution" class="button">See the Final Solution!</a>
+        <br><br>
+
+        <img src="./assets/banner.png" class="banner">
+
+        <h2 id="research">Research & User Insights</h2>
+        <p>To better understand Duolingo's user behavior and challenges, I analyzed investor reports, app store reviews, and community conversations on <a href="https://www.reddit.com/r/duolingo/" target="_blank" rel="noopener">r/duolingo</a>. These sources surfaced consistent patterns in engagement behavior, reliance on extrinsic motivators, and underlying user dissatisfaction with progress quality.</p>
+
+        <h3>Quantitative Insights</h3>
+        <ul>
+          <li><strong>500M+ registered users</strong>, with 21.4M daily active users as of Q2 2023. <a href="https://duolingoguides.com/how-many-people-use-duolingo/?utm_source=chatgpt.com" target="_blank">[source]</a></li>
+          <li><strong>Streak retention works:</strong> Users with 7-day streaks are 3.6x more likely to return daily. <a href="https://blog.duolingo.com/how-duolingo-streak-builds-habit/?utm_source=chatgpt.com" target="_blank">[source]</a></li>
+          <li><strong>Streak Freeze impact:</strong> The feature reduced churn by 21% for users at risk of breaking a streak. <a href="https://www.orizon.co/blog/duolingos-gamification-secrets?utm_source=chatgpt.com" target="_blank">[source]</a></li>
+        </ul>
+        <p>These numbers demonstrate Duolingo’s strength in driving consistent daily check-ins—but also reveal cracks in the quality of that consistency. For example, the 21% churn reduction achieved by introducing <em>Streak Freezes</em> signals that a substantial portion of users were already on the verge of dropping off due to missed days. This raises concerns about the depth and sustainability of these habits. If so many users require a safety net to maintain a streak, it calls into question whether the platform is truly fostering regular, focused practice at a level that supports meaningful language acquisition.</p>
+        <p>In other words, Duolingo excels at creating daily rituals—but not necessarily language fluency. From a business standpoint, this “low-engagement retention” may limit opportunities to grow lifetime value through premium subscriptions like Duolingo Plus or Max, where deeper user engagement correlates with higher conversion.</p>
+
+        <h3>Qualitative Insights from Reddit</h3>
+        <p>In a popular Reddit thread titled <a href="https://www.reddit.com/r/duolingo/comments/1kwrx2p/are_you_actually_learning_a_language/" target="_blank">“Are you actually learning a language?”</a>, users debated the true effectiveness of Duolingo. While some praised its accessibility and consistency, many expressed concern over lack of depth, long-term skill retention, and superficial content repetition.</p>
+
+        <h4>User Segments</h4>
+        <ul>
+          <li><strong>Streak Maintainers:</strong> Use the app daily to maintain streaks and compete on XP leaderboards, with little regard for language progress.</li>
+          <li><strong>Casual Learners:</strong> Use Duolingo inconsistently, often triggered by reminders, guilt, or social pressure from friends.</li>
+          <li><strong>Dedicated Learners:</strong> More goal-oriented, often combining Duolingo with textbooks, conversation apps, or tutors to deepen learning.</li>
+        </ul>
+
+        <h3>Pain Points Identified</h3>
+        <div class="painpoint">
+          <label>⚡ Shallow Engagement</label>
+          <p>Gamification rewards surface-level behavior. Many users complete the shortest lesson possible just to protect their streak, which limits vocabulary depth and grammar development over time.</p>
+        </div>
+        <div class="painpoint">
+          <label>💔 Streak Loss = Drop-Off</label>
+          <p>Reddit users repeatedly report abandoning the app after losing a long streak. The emotional investment in streaks creates a "nothing left to lose" mindset once broken, revealing the fragility of streak-based habit loops.</p>
+        </div>
+        <div class="painpoint">
+          <label>📉 Progress Feels Abstract</label>
+          <p>XP and badges offer instant gratification, but fail to communicate true language competence. Users report “winning Duolingo” without feeling any closer to conversational fluency—eroding trust in the app’s pedagogical value.</p>
+        </div>
+        <p>Taken together, these insights reveal a behavioral ceiling: Duolingo successfully builds the habit of showing up—but often fails to transform that habit into deeper learning. This gap presents a strategic opportunity to design for <strong>quality engagement</strong>, not just quantity. As a PM, my goal is to help realign the product’s retention mechanics with its core value proposition: helping users actually learn a language.</p>
+
+        <h2 id="pg">Problem & Goal</h2>
+        <div class="section-columns">
+          <div class="row">
+            <div class="label"><h4>Problem</h4></div>
+            <div class="content">
+              <p>Duolingo has successfully built one of the stickiest education apps through gamification mechanics like streaks, XP, and competitive leagues. However, deeper investigation reveals that these features often promote routine usage without fostering meaningful progress toward language fluency. Key user behaviors and data suggest:</p>
+              <ul>
+                <li>Many users log in solely to preserve their streak—completing just one lesson and exiting.</li>
+                <li>Streak-related churn is high: users frequently disengage after breaking a long streak.</li>
+                <li>Features like Streak Freezes, while effective in reducing churn, signal weak underlying learning habits.</li>
+              </ul>
+              <p>This phenomenon—what I refer to as the <strong>“Streak Plateau”</strong>—represents a major gap: Duolingo drives daily engagement, but that engagement rarely translates into durable learning outcomes.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label"><h4>Objective</h4></div>
+            <div class="content">
+              <p>This case study seeks to design features that transform shallow check-ins into deeper language practice. The goals are to:</p>
+              <ul>
+                <li>Encourage users to complete more than one lesson per session.</li>
+                <li>Foster sustainable, self-motivated learning habits—especially for casual and streak-driven users.</li>
+                <li>Reignite engagement for users who’ve churned after breaking long streaks.</li>
+              </ul>
+              <p>Ultimately, the objective is to realign Duolingo’s retention strategy with its educational mission—so that users don’t just show up daily, but actually learn. From a business standpoint, this could translate to higher user lifetime value (LTV), stronger subscription conversion, and long-term product differentiation based on learning efficacy, not just habit mechanics.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="current">Current Features Analysis</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Purpose</th>
+              <th>Strengths</th>
+              <th>Limitations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Streaks</td>
+              <td>Build daily habit via visual motivation</td>
+              <td>Routine reinforcement, shareable</td>
+              <td>Encourages minimal engagement only</td>
+            </tr>
+            <tr>
+              <td>XP Leagues</td>
+              <td>Competitive learning</td>
+              <td>Motivates high achievers</td>
+              <td>Stressful or irrelevant to casual users</td>
+            </tr>
+            <tr>
+              <td>Streak Freezes</td>
+              <td>Forgiveness for missed days</td>
+              <td>Reduces churn from mistakes</td>
+              <td>Encourages passive behavior</td>
+            </tr>
+            <tr>
+              <td>Social & Leaderboards</td>
+              <td>Peer motivation</td>
+              <td>Boosts return rate</td>
+              <td>Still not tied to actual learning</td>
+            </tr>
+            <tr>
+              <td>Push Notifications</td>
+              <td>Reminder nudges</td>
+              <td>Effective re-engagement</td>
+              <td>Easy to ignore</td>
+            </tr>
+            <tr>
+              <td>Daily Quests</td>
+              <td>Short-term incentives</td>
+              <td>Varied learning activity</td>
+              <td>Stops after task is complete</td>
+            </tr>
+            <tr>
+              <td>Widgets</td>
+              <td>Passive visibility and re-engagement</td>
+              <td>Always-on presence; subtle habit reinforcement</td>
+              <td>Limited interactivity; can become background noise</td>
+            </tr>          
+          </tbody>
+        </table>
+
+        <h2 id="solution">Solution</h2>
+        <p>To address Duolingo's “Streak Plateau,” I designed a lightweight feature called the <strong>Daily Depth Challenge (DDC)</strong>. The goal is to nudge users—especially streak maintainers and casual learners—toward completing more meaningful practice within the same daily usage loop. Rather than overhauling Duolingo’s core UX, this concept builds upon existing habits with low-friction, habit-friendly design.</p>
+
+        <div class="feature-card">
+          <div class="feature-text">
+            <h4>🎯 Daily Depth Challenge (V1)</h4>
+            <p><strong>What it is:</strong> A lightweight, opt-in challenge that appears after a user completes their first lesson of the day. It nudges them to complete a deeper practice sequence (e.g., new lesson + review). Completion rewards include bonus XP and progress toward a new “Depth Streak” badge, giving users a reason to stay on longer—without making it feel mandatory.</p>
+            <h4>🧩 Feature Concept</h4>
+            <ul>
+              <li>Displayed post-lesson to minimize disruption to streak rituals.</li>
+              <li>Uses static difficulty tiers for V1 (e.g., beginner = 1 new + 1 review lesson).</li>
+              <li>Completion unlocks a 2× XP multiplier and progress toward a 7-day Depth Streak badge.</li>
+              <li>Includes a “Skill Depth Meter” showing basic balance (e.g., lesson types: listening vs. grammar).</li>
+            </ul>
+            <h4>📏 V1 Scope & Realistic Constraints</h4>
+            <ul>
+              <li>No dynamic personalization or ML; uses level-based presets.</li>
+              <li>Depth Meter based only on tagged activity types (e.g., listening, reading)—not linguistic complexity.</li>
+              <li>No backend changes to lesson content; rewards and logic integrate with current XP system.</li>
+              <li>Soft opt-in: If a user skips the challenge, the core loop remains unaffected.</li>
+            </ul>
+            <h4>📊 Success Metrics</h4>
+            <ul>
+              <li><strong>Primary:</strong> % of sessions with >1 lesson, DDC completion rate, session duration uplift.</li>
+              <li><strong>Secondary:</strong> Day 7 / Day 30 retention among DDC participants, re-engagement post-streak break, Plus conversion uplift in DDC cohort.</li>
+            </ul>
+            <h4>📈 Strategic Impact</h4>
+            <ul>
+              <li>Shifts user motivation subtly from extrinsic (XP/streak) to intrinsic (depth/self-progress).</li>
+              <li>Allows phased A/B testing with minimal product risk.</li>
+              <li>Opens a roadmap for future iterations: ML-personalized challenges, peer comparisons, or integrated classroom-style progress feedback.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 id="kpis">Key Performance Indicators (KPIs)</h2>
+        <p>To assess the value of the <strong>Daily Depth Challenge</strong>, I focused on KPIs that reflect both user learning depth and long-term retention potential. These metrics also account for implementation trade-offs and behavioral segmentation.</p>
+        <div class="section-columns">
+          <div class="row">
+            <div class="label"><h4>North Star Metric</h4></div>
+            <div class="content">
+              <p><strong>Sessions with meaningful learning activity</strong> — defined as sessions with ≥2 different activity types (e.g., lesson + review, grammar + listening).</p>
+              <p>This metric captures depth without penalizing short sessions or high-frequency users, aligning well with Duolingo’s low-friction philosophy.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label"><h4>Primary KPIs</h4></div>
+            <div class="content">
+              <ul>
+                <li><strong>+X% uplift in avg. session duration</strong> vs. control</li>
+                <li><strong>Completion rate of DDC</strong> (target: 50–70%)</li>
+                <li><strong>% of users with >1 lesson/session</strong></li>
+                <li><strong>Day 7 / Day 30 retention</strong> of DDC group vs. baseline</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label"><h4>Business KPIs</h4></div>
+            <div class="content">
+              <ul>
+                <li><strong>Plus conversion rate</strong> delta in DDC participants</li>
+                <li><strong>Churn rate drop</strong> for users completing 2+ Depth Streaks</li>
+                <li><strong>LTV uplift</strong> (if feature sustains >30-day depth streak engagement)</li>
+              </ul>
+              <p>Note: Business impact will likely manifest over a 60–90 day period, especially for LTV and subscription signals.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label"><h4>Testing Strategy</h4></div>
+            <div class="content">
+              <p><strong>A/B Testing Plan:</strong></p>
+              <ul>
+                <li><strong>Test Group A:</strong> Shown DDC after 7-day streak milestone.</li>
+                <li><strong>Control Group B:</strong> Receives current core flow only.</li>
+                <li>Test runs for 30 days across a 5% sample of casual and streak-focused users.</li>
+                <li>Segment by persona (Streak Maintainer / Casual Learner / Dedicated Learner).</li>
+              </ul>
+              <p>This ensures behavioral data is gathered without disrupting core monetization or habit loops in the broader population.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="risks">Risks & Considerations</h2>
+        <p>While the Daily Depth Challenge (DDC) and related features offer a path toward deeper engagement, any product change carries potential downsides. A thoughtful product strategy requires anticipating these risks and proactively planning mitigation strategies.</p>
+        <div class="section-columns">
+          <div class="row">
+            <div class="label"><h4>Engagement Friction</h4></div>
+            <div class="content">
+              <p>Some users may perceive the added challenge as pressure rather than motivation—especially those with limited time or cognitive energy. There’s a fine line between encouraging depth and overwhelming casual learners.</p>
+              <p><strong>Mitigation:</strong> Make DDC optional and celebratory, never required. Ensure the first prompt appears only after a user completes their usual streak-preserving lesson.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label"><h4>Incentive Misalignment</h4></div>
+            <div class="content">
+              <p>Gamification can be gamed. Power users might exploit easy review lessons to trigger Depth Streaks without meaningful effort—compromising learning outcomes.</p>
+              <p><strong>Mitigation:</strong> Gradually increase challenge variety, and include skill diversity requirements to prevent repetitive, low-effort behavior.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label"><h4>Dilution of Core Habit Loop</h4></div>
+            <div class="content">
+              <p>Duolingo’s streak loop is a well-oiled behavioral engine. Adding new layered mechanics risks distracting from the simplicity that makes it sticky.</p>
+              <p><strong>Mitigation:</strong> Design DDC to feel like a bonus—not a new obligation. Maintain streak continuity even if the challenge is skipped.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="label"><h4>Operational Complexity</h4></div>
+            <div class="content">
+              <p>Tracking Skill Depth and supporting personalized challenges require backend updates to user data models, skill tagging, and logging infrastructure.</p>
+              <p><strong>Mitigation:</strong> In V1, keep logic simple: pre-defined challenges by user tier (beginner, intermediate). Use existing activity logs before building a custom depth-tracking engine.</p>
+            </div>
+          </div>
+        </div>
+        <p>Identifying and managing these risks early helps ensure the solution is not only engaging and educational, but also sustainable within Duolingo’s product ecosystem.</p>
+
+        <h2 id="other">💡 Other Exploratory Solutions</h2>
+        <p>In the early ideation phase, I explored multiple approaches for driving depth, habit quality, and motivation diversity. These features could be introduced in future A/B tests or bundled into a premium tier like Duolingo Max:</p>
+        <div class="equal-height-row">
+          <div class="feature-card" style="flex-direction: column;">
+            <h4>⚡ Lesson Momentum Nudges</h4>
+            <p>After completing the first lesson of the day, users see a dynamic prompt: <em>“You're 3 minutes away from a bonus XP boost. Want to continue?”</em> This creates psychological momentum and incentivizes a second lesson.</p>
+          </div>
+          <div class="feature-card" style="flex-direction: column;">
+            <h4>📈 Fluency Score Tracker</h4>
+            <p>A weekly-updated personal score based on lesson accuracy, skill diversity, and streak consistency. Encourages users to track meaningful growth over time, not just badge count or XP.</p>
+          </div>
+          <div class="feature-card" style="flex-direction: column;">
+            <h4>📊 Habit Pulse Dashboard</h4>
+            <p>A new tab on the home screen showing user behavior insights: time-of-day activity, neglected skills, preferred content types. Includes nudges like: <em>“You haven’t done any listening this week—try a short audio drill?”</em></p>
+          </div>
+          <div class="feature-card" style="flex-direction: column;">
+            <h4>🔄 Streak Recovery Quests</h4>
+            <p>For users who break a long streak, a 3-day redemption challenge offers a chance to earn it back. Replaces passive Streak Freeze with active recovery via daily engagement missions.</p>
+          </div>
+          <div class="feature-card" style="flex-direction: column;">
+            <h4>👥 Pair & Practice Mode</h4>
+            <p>Enables friends to commit to a shared 3-day challenge: both must complete 2 lessons/day. Success unlocks group XP boosts and a shared “Study Buddy” badge—adding accountability and social motivation.</p>
+          </div>
+        </div>
+
+        <h2 id="next">Next Steps</h2>
+        <ul>
+          <li>Conduct 1:1 user interviews with streak maintainers and churned users to validate assumptions and surface deeper needs.</li>
+          <li>Build and test wireframes or clickable prototypes for the Skill Depth Meter and badge progress flows.</li>
+          <li>Collaborate with engineers to estimate effort and define a true phased rollout strategy, including backend tagging and tracking requirements.</li>
+        </ul>
+
+        <h2 id="reflection">Reflection</h2>
+        <p>As both a product enthusiast and Duolingo user, working on this case study gave me the opportunity to explore the intersection between habit design, user psychology, and real educational outcomes. While I’ve always admired Duolingo’s ability to build daily rituals through gamification, this exercise helped me understand the nuances—and limits—of engagement that’s driven solely by extrinsic rewards.</p>
+
+        <p>Through structured research, behavioral analysis, and solution design, I identified what I call the <strong>“Streak Plateau”</strong>: the point at which users continue logging in, but no longer feel they’re learning. Tackling this challenge required me to balance retention mechanics with instructional integrity—ultimately leading to the <strong>Daily Depth Challenge</strong> as a V1 feature that could drive more meaningful learning behaviors without disrupting Duolingo’s core loop.</p>
+
+        <h3>Takeaways...</h3>
+        <ul>
+          <li><strong>Behavior ≠ Impact:</strong> High retention doesn’t always mean high value—especially in edtech. Metrics need to reflect not just usage, but outcomes.</li>
+          <li><strong>Designing for motivation is complex:</strong> The same streak that builds habit can also lead to disengagement if not supported with depth.</li>
+          <li><strong>PM thinking is about trade-offs:</strong> I had to consider implementation cost, user friction, and business alignment when scoping my solutions.</li>
+        </ul>
+        <p>This project reinforced my belief that the best product features don’t just engage users—they help them grow. If I had the chance to work on a team like Duolingo’s, I’d be excited to keep building with purpose, data, and empathy.</p>
+        <h4><strong>Thank you for taking the time to read this page!</strong></h4>
+        <img src="assets/loveduo.png" style="display: block; margin: 0 auto; width: 50%;">
       </div>
     </div>
   </body>
@@ -94,51 +390,4 @@
       });
     });
   </script> 
-
-  <div id="lightbox" class="lightbox">
-    <div class="lightbox-content">
-      <img id="lightbox-img" src="" alt="Enlarged">
-    </div>
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const tocLinks = document.querySelectorAll(".toc-nav a");
-      const sections = Array.from(tocLinks).map(link =>
-        document.querySelector(link.getAttribute("href"))
-      );
-  
-      window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY + 140;
-        let currentId = "";
-        sections.forEach(section => {
-          if (scrollPosition >= section.offsetTop) {
-            currentId = section.id;
-          }
-        });
-  
-        tocLinks.forEach(link => {
-          link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
-        });
-      });
-  
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImg = document.getElementById("lightbox-img");
-  
-      document.querySelectorAll(".equal-height-row img, .feature-media img, .full-image").forEach(img => {
-        img.style.cursor = "zoom-in";
-        img.addEventListener("click", () => {
-          lightboxImg.src = img.src;
-          lightbox.style.display = "flex";
-        });
-      });
-  
-      lightbox.addEventListener("click", (e) => {
-        if (!e.target.closest(".lightbox-content")) {
-          lightbox.style.display = "none";
-          lightboxImg.src = "";
-        }
-      });
-    });
-  </script>
-</html>
+  </html>
