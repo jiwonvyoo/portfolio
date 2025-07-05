@@ -493,15 +493,6 @@ img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* @keyframes scrollAuto {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-} */
-
 .lightbox {
   display: none;
   position: fixed;
@@ -536,21 +527,89 @@ img {
   to { transform: scale(1); opacity: 1; }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVENESS */
+/* Mobile First: Up to 768px */
 @media (max-width: 768px) {
-  .about-content {
+  /* Navigation */
+  .top-nav {
     flex-direction: column;
     align-items: center;
+    height: auto;
+    padding: 1rem;
   }
 
-  
-
-  .about-title {
-    font-size: 1.6rem;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
   }
 
-  
+  .nav-links a {
+    margin-left: 0;
+    font-size: 0.95rem;
+  }
 
-  
+  /* Intro Section */
+  .intro {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .tagline,
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  /* Projects */
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .project-card,
+  .case-card {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+  }
+
+  /* About Section */
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .about-title,
+  .fun-title {
+    font-size: 2rem;
+  }
 
   .sticky-photo {
     position: relative !important;
@@ -560,64 +619,51 @@ img {
     z-index: auto !important;
   }
 
-  .about-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-text {
-    width: 100%;
-    padding: 0 1rem;
-    text-align: left;
-  }
-
   .sticky-photo img {
     max-width: 250px;
     height: auto;
   }
 
-  .projects-grid {
+  .about-text,
+  .fun-text {
+    font-size: 0.95rem;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  .about-content {
     flex-direction: column;
     align-items: center;
   }
 
-  .project-card {
-    width: 90%;
-    padding: 1rem;
+  .toggle-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  .toggle-btn {
+    width: 100%;
+    max-width: 300px;
   }
 
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .tagline, .subtitle {
-    font-size: 1rem;
-  }
-
-  .fun-title,
-  .about-title {
-    font-size: 2rem;
-  }
-
-  .fun-text,
-  .about-text {
-    font-size: 0.95rem;
+  /* Fun Page */
+  .fun-carousel-track img {
+    height: 200px;
   }
 }
 
+/* Tablet: 769px–1024px */
 @media (max-width: 1024px) {
+  /* Navigation */
   .top-nav {
     flex-direction: column;
+    align-items: center;
     height: auto;
     padding: 1rem;
   }
 
   .nav-links {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
@@ -626,17 +672,47 @@ img {
 
   .nav-links a {
     font-size: 0.9rem;
+    margin-left: 0;
   }
-}
 
-/* ENHANCEMENTS */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+  /* Projects Grid */
+  .projects-grid {
+    padding: 1rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .project-card,
+  .case-card {
+    width: 90%;
+  }
+
+  /* About + Fun Sections */
+  .about-wrapper,
+  .fun-wrapper {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .about-text,
+  .fun-text {
+    font-size: 1rem;
+  }
+
+  .fun-carousel-track img {
+    height: 220px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .tagline,
+  .subtitle {
+    font-size: 1.1rem;
   }
 }
