@@ -426,6 +426,11 @@ img {
   margin-top: 1rem;
 }
 
+.image-caption {
+  font-style: italic;
+  text-align: center;
+}
+
 .banner{
   width: 100%;
   display: block;

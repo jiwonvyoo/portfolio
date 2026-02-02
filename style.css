@@ -417,6 +417,7 @@ footer {
 /* HIGHLIGHT COLORS */
 .highlight { color: #457b9d; font-weight: 600; }
 .highlight-orange { color: #e76f51; font-weight: 600; }
+.highlight-red { color: #b0002d; font-weight: 600; }
 .highlight-brown { color: #8d5524; font-weight: 600; }
 .highlight-yellow { color: #ddbd48; font-weight: 600; }
 .highlight-green { color: #8ac926; font-weight: 600; }
