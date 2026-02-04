@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jiwon Yoo</title>
+    <script src="https://kit.fontawesome.com/67f90579cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../projects/project-styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>html { scroll-behavior: smooth; }</style>
+  </head>
+
+  <body>
+    <header id="navbar">
+      <nav class="top-nav">
+        <a href="../../index.html" class="logo">Jiwon Yoo</a>
+        <div class="nav-links">
+          <a href="../../index.html#projects">Projects</a>
+          <a href="../../index.html#case">Case Studies</a>
+          <a href="../../about.html">About</a>
+          <a href="../../assets/resume.pdf" target="_blank">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="project-hero">
+      <div class="hero-content">
+        <h1 class="project-title">Spotify Korea</h1>
+        <p class="project-subtitle">Winning in a Fragmented Market: How Spotify Becomes the Most Meaningful Listening Home</p>
+
+        <div class="hero-details">
+          <div class="detail-block">
+            <div class="detail-label">Role</div>
+            <div class="detail-value">Market Research Study</div>
+          </div>
+          <div class="detail-block">
+            <div class="detail-label">Details</div>
+            <div class="detail-value">Independent Project</div>
+          </div>
+          <div class="detail-block">
+            <div class="detail-label">Focus</div>
+            <div class="detail-value">Positioning, Creative Strategy, Measurement</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-wrapper">
+      <aside class="toc-nav">
+        <p class="toc-title">On this page</p>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#research">Background Research</a></li>
+          <li><a href="#competitive">Competitive Analysis</a></li>
+          <li><a href="#strategy">Strategy</a></li>
+          <li><a href="#metrics">Metrics</a></li>
+          <li><a href="#next">Next Steps</a></li>
+          <li><a href="#reflection">Reflections</a></li>
+        </ul>
+      </aside>
+
+      <div class="container">
+        <h2 id="overview">Overview</h2>
+        <p>
+          Coming from Korea and observing the daily habits of my peers, I realized a striking divide: 
+          <strong>there is no "default" music home in Korea.</strong> 
+        </p>
+        <p>
+          When I polled a group chat of friends back home, the responses were scattered: <em>"Melon," "YouTube Music," "Apple Music," "Spotify."</em> 
+          Coming to college in the U.S., where Spotify is the unquestioned social default, this contrast intrigued me. 
+          Why is the world’s leading audio platform a "secondary choice" in one of the world's most vibrant music markets?
+        </p>
+        <p>
+          This case study explores the structural and cultural reasons for this fragmentation and diagnoses how Spotify can strategically position itself to move from a "niche preference" to a "market winner."
+        </p>
+
+        <h2 id="research">Background Research</h2>
+
+        <h3>1) Evidence of Market Fragmentation</h3>
+        <p>
+          Unlike the U.S. duopoly of Spotify and Apple Music, the Korean market is split across local incumbents and global giants. 
+          Recent Wiseapp data shows <strong>YouTube Music</strong> leading in MAU (Monthly Active Users) due to YouTube Premium bundling, 
+          followed closely by <strong>Melon</strong>, with Spotify and others holding smaller, specialized shares. 
+          This "multi-homing" behavior suggests that users haven't found a single platform that satisfies all their "Jobs to be Done."
+        </p>
+        <img class="full-image" src="market.png" alt="Bar chart showing music platform usage in South Korea" style="max-width: 80%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Source context: Chosun Daily 2026 <a href="https://www.chosun.com/english/travel-food-en/2026/01/14/6MPQGDNT2VFWBBRSWNQJZ3OB74/">[Source]</a>.</p>
+        <br>
+
+
+        <h3>2) The "Spotify Edge" vs. The Korean "정서" (Sentiment)</h3>
+        <p>
+          <strong>Why people choose Spotify:</strong> It is the global gold standard for <em>Discovery Rituals</em>. 
+          Its algorithmic moat (Discover Weekly, Daily Mix) turns listening into a data-driven mirror of the user's identity.
+        </p>
+        <p>
+          <strong>Why Spotify is used less in Korea:</strong>
+        </p>
+        <ul>
+          <li><strong>Ecosystem Bundling:</strong> YouTube Music’s growth is a masterclass in low-friction acquisition via bundling. In a value-sensitive market, "Free with Premium" often trumps "Best UI."</li>
+          <li><strong>Chart Culture vs. Discovery:</strong> Korean listening is historically <em>Top-Down</em> (centered on the "Real-time Chart"). Spotify’s <em>Bottom-Up</em> (personalization) model requires a shift in cultural habit.</li>
+          <li><strong>Trust & Catalog Anxiety:</strong> The 2021 licensing dispute with Kakao Entertainment created a lingering perception that Spotify "doesn't have everything." Even with a now-complete catalog, the <em>brand trust</em> regarding local content takes time to rebuild.</li>
+        </ul>
+
+        <div style="display: flex; gap: 20px; margin: 30px 0; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px; background: #fff; padding: 25px; border-radius: 12px; border: 1px solid #eee; text-align: center;">
+                <i class="fa-solid fa-list-ol" style="font-size: 2.5rem; color: #ec7f7f; margin-bottom: 15px;"></i>
+                <h4 style="margin-bottom: 10px;">Traditional KR Model</h4>
+                <p style="font-weight: 600; color: #ec7f7f;">Top-Down (Charts)</p>
+                <p style="font-size: 0.9rem; color: #555;">"I listen to what everyone else is listening to." (Passive, collective)</p>
+            </div>
+        
+            <div style="flex: 1; min-width: 250px; background: #f0f8ff; padding: 25px; border-radius: 12px; border: 1px solid #cce5ff; text-align: center;">
+                <i class="fa-solid fa-fingerprint" style="font-size: 2.5rem; color: #1DB954; margin-bottom: 15px;"></i>
+                <h4 style="margin-bottom: 10px;">Spotify Model</h4>
+                <p style="font-weight: 600; color: #1DB954;">Bottom-Up (Discovery)</p>
+                <p style="font-size: 0.9rem; color: #555;">"The algorithm finds what is uniquely for me." (Active, individual)</p>
+            </div>
+        </div>
+
+        <h3>3) Finance & Market Intelligence Lens</h3>
+        <p>
+          By reviewing Spotify’s <strong>Investor Relations (IR) filings</strong> and 2024-2025 growth reports, I’ve analyzed the unit economics of the Korea entry:
+        </p>
+        <ul>
+          <li><strong>Top-of-Funnel Play:</strong> The 2024 launch of <em>Spotify Free</em> in Korea is a strategic move to lower <strong>CAC (Customer Acquisition Cost)</strong>. By offering a free tier, Spotify builds the "Discovery Habit" before attempting to monetize via <strong>LTV (Lifetime Value)</strong> growth.</li>
+          <li><strong>Market Penetration:</strong> Analysis of fiscal data suggests that Spotify's success in Korea is less about immediate ARPU (Average Revenue Per User) and more about capturing the <strong>Gen-Z "Identity Share"</strong> to ensure long-term platform stickiness.</li>
+        </ul>
+
+        <h2 id="strategy">Strategic Diagnosis</h2>
+        <p>
+          Winning in Korea requires solving <strong>Cultural Tensions</strong>, not just launching features. I have identified three key diagnosis points:
+        </p>
+
+        <div class="feature-card">
+          <div class="feature-text">
+            <h4>I. The Identity Tension: Music as an Accessory</h4>
+            <p><strong>Diagnosis:</strong> In Korea, music is a <em>social signal</em>. Spotify treats music as a private experience, but Korean users prioritize how their taste looks on their "digital profile" (KakaoTalk, Instagram).</p>
+            <p><em>Opportunity:</em> Move Spotify from a "Listening Tool" to a <strong>"Digital Identity Badge"</strong> that integrates seamlessly with local social ecosystems.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-text">
+            <h4>II. The "Pali-Pali" (Speed) Gap</h4>
+            <p><strong>Diagnosis:</strong> Spotify’s algorithm requires time to learn a user. Korea’s <strong>Pali-Pali</strong> culture demands immediate relevance. If the first 3 songs on a "Daily Mix" don't hit, the user switches to a Top 100 Chart.</p>
+            <p><em>Opportunity:</em> Hyper-contextual, "Zero-Day" curation that matches the physical speed of Korean urban life (e.g., specific transit-route playlists).</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-text">
+            <h4>III. The Global Bridge Strategy</h4>
+            <p><strong>Diagnosis:</strong> Spotify is often viewed as a "Western Global Player." It needs to be seen as <strong>"The Window to the World"</strong> for Korean culture.</p>
+            <p><em>Opportunity:</em> Repositioning the brand narrative around <strong>National Pride</strong>—showing how Spotify’s global scale helps Korean artists trend in London, NYC, and Paris.</p>
+          </div>
+        </div>
+
+        <h2 id="metrics">Measuring Strategic Success</h2>
+        <p>
+          To move the needle in a fragmented market, success should be measured by <strong>Habituation</strong> and <strong>Sentiment</strong>:
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Strategic Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>First-Open Rate</strong></td>
+              <td>Becoming the "morning commute" default.</td>
+            </tr>
+            <tr>
+              <td><strong>Social Share-of-Voice</strong></td>
+              <td>Measuring Spotify's presence on KakaoTalk/Instagram profiles.</td>
+            </tr>
+            <tr>
+              <td><strong>Free-to-Premium Velocity</strong></td>
+              <td>How quickly the "Discovery Habit" turns into a paying habit.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 id="reflection">Reflections</h2>
+        <p>
+          The winner in Korea won't be the app with the most songs, but the app that understands the <strong>daily rhythm and identity</strong> of the Korean listener. 
+        </p>
+
+        <h4><strong>Thank you for taking the time to read this page!</strong></h4>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-icons">
+        <a href="mailto:jiwon_yoo@brown.edu" target="_blank" class="fa fa-envelope social-icon" aria-hidden="true"></a>
+        <a href="https://github.com/jiwonvyoo" target="_blank" class="fa fab fa-github social-icon" aria-hidden="true"></a>
+        <a href="https://www.linkedin.com/in/jiwon-v-yoo" target="_blank" class="fa fa-linkedin social-icon" aria-hidden="true"></a>
+      </div>
+      <p>© 2025 Jiwon Yoo</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const tocLinks = document.querySelectorAll(".toc-nav a");
+          const sections = Array.from(tocLinks).map(link =>
+            document.querySelector(link.getAttribute("href"))
+          );
+    
+          window.addEventListener("scroll", () => {
+            const scrollPosition = window.scrollY + 140;
+            let currentId = "";
+            sections.forEach(section => {
+              if (scrollPosition >= section.offsetTop) {
+                currentId = section.id;
+              }
+            });
+    
+            tocLinks.forEach(link => {
+              link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
+            });
+          });
+    
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImg = document.getElementById("lightbox-img");
+    
+          document.querySelectorAll(".equal-height-row img, .feature-media img, .full-image").forEach(img => {
+            img.style.cursor = "zoom-in";
+            img.addEventListener("click", () => {
+              lightboxImg.src = img.src;
+              lightbox.style.display = "flex";
+            });
+          });
+    
+          lightbox.addEventListener("click", (e) => {
+            if (!e.target.closest(".lightbox-content")) {
+              lightbox.style.display = "none";
+              lightboxImg.src = "";
+            }
+          });
+        });
+      </script>
+  </body>
+</html>
